@@ -1,0 +1,145 @@
+.auth {
+  margin: 100px auto;
+  width: 95%;
+  max-width: 25rem;
+  border-radius: 6px;
+  background-color: #8a2b06;
+  color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+.formHeader {
+  background-color: #8a2b06;
+  color: white;
+  height: 6rem;
+
+  transform: translateY(-20px);
+  padding: 0 5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+.linkTo a {
+  text-decoration: none;
+  color: white;
+}
+.formDirection {
+  text-decoration: none;
+  color: white;
+  padding: 0.3rem 1.3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formLink {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.formLink:hover,
+.formLink:active {
+  color: rgba(245, 245, 245, 0.574);
+}
+.auth h1 {
+  text-align: center;
+  color: white;
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  font: inherit;
+  background-color: #f1e1fc;
+  color: black;
+  border-radius: 4px;
+  border: 1px solid white;
+  width: 100%;
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  color: white;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+}
+
+.actions button:hover {
+  background-color: #bd3b0869;
+  border-color: #bd3b0869;
+}
+.actions .toggle {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0.15rem 1.5rem;
+}
+
+.actions .toggle:hover {
+  background-color: transparent;
+  color: rgba(245, 245, 245, 0.518);
+}
+.sidebarIconView {
+  position: relative;
+  top: 35%;
+  left: -4%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+.sidebar-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+@media (max-width: 534px) {
+  .header {
+    font-size: 1rem;
+    height: 3rem;
+  }
+  .sidebarIconView {
+    display: block;
+  }
+  .sidebar-form {
+    background-color: rgba(0, 0, 0, 0.837);
+    overflow-x: hidden;
+    min-width: 98%;
+    padding: 1rem 0.5rem;
+    height: 13rem;
+    transform: translate(-80px, 40px);
+  }
+  .block {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
+}

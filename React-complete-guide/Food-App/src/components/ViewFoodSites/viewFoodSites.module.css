@@ -1,0 +1,76 @@
+.image {
+  width: 80%;
+  height: 15rem;
+  border-radius: 2px;
+  display: block;
+  margin: 0 auto 25px auto;
+  margin-bottom: 25px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  cursor: pointer;
+}
+.scale {
+  position: relative;
+  width: 100%;
+}
+.icons {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 83%;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: "Quicksand", sans-serif;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.icons > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+.icons:hover,
+.icons:active,
+.icons:active {
+  opacity: 1;
+}
+.icons:hover > *,
+.icons:active > *,
+.icons:active > * {
+  transform: translateY(0);
+}
+
+.scale .foodName {
+  color: rgba(255, 255, 255, 0.856);
+  position: relative;
+  top: -4%;
+  text-align: center;
+  margin-left: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+}
+.positionIcon {
+  display: flex;
+  width: 5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5rem auto;
+}
+.cartIcon,
+.appleIcon,
+.naira {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.cartIcon:hover,
+.appleIcon:hover,
+span:hover {
+  color: rgba(245, 245, 245, 0.696);
+}
+.hourDeal {
+  margin-left: 2rem;
+  color: whitesmoke;
+}

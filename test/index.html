@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <a href="../../">
+        click me
+    </a>
+    <script>
+        const anchor = document.createElement("a");
+
+        anchor.href = "https://developer.mozilla.org/en-US/Location.host";
+        console.log(anchor.host == "developer.mozilla.org");
+
+        anchor.href = "https://developer.mozilla.org:443/en-US/Location.host";
+        console.log(anchor.host == "developer.mozilla.org");
+        // The port number is not included because 443 is the scheme's default port
+
+        anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host";
+        console.log(anchor.host == "developer.mozilla.org:4097");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* contact section */
+
+.bg {
+    background: var(--color2);
+}
+
+.contact {
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.contact .contact-address {
+    max-width: 110px;
+    margin: 2rem auto;
+}
+
+.contact .contact-address a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact .description {
+    width: 400px;
+    margin: auto;
+}
+
+.gradients {
+    background: linear-gradient( 90deg, rgba(255, 23, 228, 1) 0%, rgba(134, 251, 251, 1) 100%);
+    height: 2px;
+}

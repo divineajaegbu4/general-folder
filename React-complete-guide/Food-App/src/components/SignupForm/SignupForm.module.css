@@ -1,0 +1,18 @@
+.text {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.669);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transform: scale(1.1, 1.1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.right {
+  position: relative;
+  left: 95%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.clickImage {
+  width: 100%;
+}

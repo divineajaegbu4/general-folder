@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock2</title>
+
+    <style>
+      body {
+        background: linear-gradient(to right, crimson, purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .clock {
+        display: grid;
+        /* grid-template-columns: repeat(3, 300px); */
+        /* margin: auto; */
+        width: 1200px;
+        height: 200px;
+        background: black;
+        color: white;
+        font-size: 10rem;
+        font-weight: bolder;
+        text-align: center;
+        /* padding-top: 1rem; */
+        padding: 30px 0;
+        border-radius: 50px;
+        text-shadow: 2px 2px 5px whitesmoke, -2px -2px 5px whitesmoke,
+          2px 2px 5px whitesmoke, -2px -2px 5px whitesmoke,
+          2px 2px 5px whitesmoke, -2px -2px 5px black, 2px 2px 5px black,
+          -2px -2px 5px black, 5px 5px 10px whitesmoke, -7px -7px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock"></div>
+
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

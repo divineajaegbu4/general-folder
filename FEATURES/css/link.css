@@ -1,0 +1,42 @@
+:root {
+    --burlywoodColor: burlywood;
+    --cadetblueColor: cadetblue;
+    --limegreenColor: #32cd32;
+    --darkcyanColor: darkcyan;
+    --purpleColor: purple;
+}
+
+.item5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.item5 a {
+    text-decoration: none;
+    width: 55.6vw;
+    flex-basis: 20%;
+    padding: 0.2rem 1.3rem;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bolder;
+}
+
+.orange {
+    background: var(--burlywoodColor);
+}
+
+.cadetblue {
+    background: var(--cadetblueColor);
+}
+
+.pink {
+    background: var(--limegreenColor);
+}
+
+.darkcyan {
+    background: var(--purpleColor);
+}
+
+.darkcyan2 {
+    background: var(--darkcyanColor);
+}

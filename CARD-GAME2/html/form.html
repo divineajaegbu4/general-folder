@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&family=Shizuru&display=swap'); */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1, */
+ @font-face {
+        font-family: "Mukta";
+        src: url("/font-family/Mukta (1).zip");
+    }
+    
+    body {
+        /* background: linear-gradient(-50deg, rgb(177, 15, 15) 60%, transparent), repeating-linear-gradient(45deg, yellow 5%, orange 0%, transparent 5%, transparent 10%), pink repeating-linear-gradient( orange, green, transparent 5%, transparent 10%); */
+    }
+    
+    input[id*="clone"]+#favicon-icon {
+        background-color: red;
+    }
+    
+    form {
+        display: flex;
+        border: 1px solid red;
+        flex-direction: column;
+        height: 80vh;
+        align-items: center;
+        justify-content: center;
+        /* border-image-source: url("https://cdn3.vectorstock.com/i/1000x1000/75/22/floral-border-frame-background-vector-1187522.jpg"); */
+        /* align-content: space-between; */
+        border: 50px solid transparent;
+        border-image: linear-gradient(-45deg, red, purple, orange, blue);
+        border-image-slice: 1;
+    }
+    
+    form input:invalid {
+        background: red;
+    }
+    
+    form input[type="checkbox"] {
+        border: 5px solid red;
+        width: 1.5rem;
+        height: 1.5rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: white;
+    }
+    
+    form input[type="checkbox"]:checked {
+        background: blue;
+        border: red;
+    }
+    
+    form input:focus-visible {
+        background: blue;
+    }
+    /* form input[type="radio"] {
+        width: 1rem;
+        height: 1rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid orange;
+    } */
+    
+    header h1:nth-last-child(1) {
+        color: yellow;
+    }
+    
+    header {
+        display: flex;
+        width: 12vw;
+        height: 150vh;
+        place-content: center center;
+        flex-wrap: wrap;
+        margin: auto;
+        text-align: center;
+        /* border: 1px solid red; */
+    }
+    
+    header h1+p {
+        color: red;
+    }
+    
+    .description {
+        /* font-family: 'Roboto', sans-serif; */
+        /* font-family: 'Shizuru', cursive; */
+        font-family: "mukta" sans-serif;
+        font-size: 1rem;
+        font-weight: 100;
+    }
+    
+    #shorthand {
+        font: oblique small-caps bolder 1.2rem/2.5 "Mukta", sans-serif;
+        white-space: pre-wrap;
+        /* font-stretch: semi-expanded; */
+    }
+</style>
+
+<body>
+    <form>
+        <input type="text" id="clone-starts">
+        <input type="text" id="favicon-icon">
+
+        <label for="intro">Introduction</label>
+        <input type="text">
+
+        <label for="intro">Email</label>
+        <input type="email">
+
+        <label for="title">Title</label>
+        <input type="text">
+
+
+
+        <label for="school">School</label>
+        <input type="text">
+
+        <input type="checkbox">
+        <label for="up">Nurse</label>
+
+        <input type="radio">
+        <label for="goes">Radiation</label>
+
+    </form>
+
+
+
+    <header>
+        <h1>Albert</h1>
+        <h1>Adiva</h1>
+
+        <h1>Bekkee</h1>
+
+        <h1>Shedrack</h1>
+
+        <h1>Iwuchukwu</h1>
+        <p>scholl</p>
+        <p>scholl</p>
+
+        <p>scholl</p>
+
+        <p>scholl</p>
+
+    </header>
+
+
+
+    <input list="school">
+
+    <datalist id="school">
+    <option value="girl">girl</option>
+    <option value="boy">boy</option>
+</datalist>
+
+    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum quos similique soluta sunt saepe earum deserunt ullam iste, obcaecati ipsum beatae ab maiores architecto natus neque omnis placeat veniam. Totam! Vitae, iure repellendus quibusdam, excepturi,
+        a delectus dolorum fugit officia laborum voluptatem cumque quasi corrupti? Itaque sit odio inventore nulla maxime provident assumenda, aspernatur fugit consectetur, aut cumque quia facilis! Ipsum quos numquam molestiae incidunt, similique eaque
+        nesciunt neque aliquid iure? Omnis ea atque animi facere nihil mollitia est, nisi dolores sequi illum voluptatem accusantium vel! Laborum eum ipsa velit. Consectetur aperiam placeat veritatis voluptates blanditiis quaerat! Repellat sit natus accusantium
+        veritatis culpa repudiandae placeat doloribus! Aliquam quas aut vel, dolorum ipsa quos libero debitis velit, accusamus in sit ipsam! Repellendus asperiores facilis consequuntur numquam inventore necessitatibus pariatur possimus quasi perspiciatis
+        non quam impedit voluptatum eos, laudantium nam, sequi dicta natus cupiditate fugiat, amet minus consequatur tempora quo reprehenderit. Ratione.</p>
+
+
+
+    <!-- <button>CLASS</button> -->
+    <a href="#">country</a>
+
+    <p id="shorthand">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia velit expedita, sapiente eos rerum vero consequuntur accusamus. In magni ab repudiandae alias! Ipsa impedit ex sequi accusantium, inventore alias similique! Amet labore sint alias
+        ex veritatis et suscipit, quam adipisci dolorem ea aliquid inventore. Nihil ut dolor voluptatem voluptatibus sunt corrupti unde, excepturi quae fugit, natus veniam, delectus magnam non! Odit labore eius aperiam quisquam praesentium molestias officia
+        rem dicta cupiditate, totam voluptates eos nulla ullam consequuntur suscipit nemo dolores quaerat perferendis, molestiae dolorem dolorum! Culpa laudantium optio minima provident. Ducimus, deserunt odio! Repudiandae mollitia ratione totam dolorum?
+        Temporibus nisi modi harum nihil labore quis, suscipit hic dolor amet sit vero sint quisquam est exercitationem, corporis sunt. Consequatur, id molestiae. Neque laborum nihil temporibus optio sequi minima molestias quas veritatis fugit nam harum
+        sint vel voluptatem est, nulla, illum cumque laudantium! Deserunt voluptates iure fugiat voluptate expedita quo quis quisquam? Recusandae optio architecto inventore possimus quam totam dolores, vitae corporis sed molestias ipsum ex sunt corrupti
+        aliquid beatae omnis, voluptatem natus est numquam aliquam nam similique? Eaque sequi voluptatibus delectus. Ratione quos eos, iste porro modi numquam mollitia deleniti! Repellat nulla perspiciatis debitis tempora. Modi veritatis, doloribus deleniti
+        amet ad, alias provident id maiores, deserunt enim excepturi porro consectetur praesentium. Mollitia at assumenda saepe ratione dolorem quos, recusandae reprehenderit velit earum dicta ad voluptates nisi inventore sit culpa amet, consequuntur
+        repellendus doloribus sequi quas quibusdam blanditiis voluptatibus. Adipisci, repellendus unde! Voluptates excepturi laborum distinctio nihil accusantium amet dolore adipisci, sunt odit perferendis sed dolorum. Voluptatibus, dicta exercitationem
+        quibusdam, sit placeat esse culpa, saepe nemo numquam animi optio? Consequatur, temporibus illum. Asperiores ut doloribus explicabo repudiandae excepturi nesciunt, dolor inventore. Voluptatum est accusamus blanditiis repudiandae ducimus dolorem
+        eligendi cumque voluptatem exercitationem ipsum adipisci itaque, quibusdam neque ea sunt tempore iure repellat. Ipsa, voluptate est cupiditate magni voluptatum fugiat, reprehenderit delectus exercitationem velit illum cumque et dolore recusandae
+        assumenda deserunt veritatis qui tenetur praesentium aliquid fuga, officia quos soluta? Corrupti, iste delectus. Atque expedita doloribus alias, est minus asperiores eaque quasi quaerat deserunt dolor non, ullam iste consectetur, voluptate voluptatibus
+        itaque quos vel quae odio hic at ad autem nulla repudiandae! Beatae! Magni itaque nobis quibusdam dolore deserunt consectetur iure laboriosam laudantium nostrum non incidunt, cum voluptas, accusamus consequuntur voluptates sed minima quis quia
+        soluta amet in totam illum. Non, autem reprehenderit? Vitae, doloremque labore ipsum autem perferendis, quo neque et porro explicabo sed recusandae illo. Beatae debitis repellendus non! Iusto laboriosam eveniet tenetur alias ipsam porro reiciendis
+        asperiores sequi optio quia! Ut fugit obcaecati deleniti, iure iste nostrum aliquam perferendis amet atque itaque architecto doloremque id. Cum harum asperiores quisquam blanditiis, nulla tempora alias totam aspernatur beatae dolores illum iste
+        illo. Laborum, similique tempore. A debitis iusto ab veniam magnam! Minima eligendi, a perferendis consequatur aut praesentium officiis tenetur voluptatem, dolor at aspernatur magnam harum eaque eum illum molestiae veniam neque? Perferendis nobis
+        corrupti ratione, modi quasi quas itaque qui vitae, consequatur eligendi delectus harum commodi deleniti alias perspiciatis debitis omnis reiciendis blanditiis voluptate ab cupiditate facere. Repudiandae odio perferendis qui! Sequi officiis dicta
+        explicabo ab omnis harum accusantium velit provident hic, eaque veniam, ipsa dignissimos tempore facilis odit reiciendis architecto quo saepe itaque praesentium. Eius in enim accusantium ipsa est. Ad maxime nisi provident? Dolorum quaerat dignissimos
+        sequi eaque voluptas atque et neque numquam quasi, libero cumque assumenda accusamus. Ipsa minus autem, quis et at voluptatibus temporibus consectetur accusantium praesentium. Harum, corrupti! Ipsa, ullam. Distinctio beatae quaerat repellendus
+        illum, quas tempora fugit exercitationem. Ex et iste sequi, laudantium eaque sed! Illo cum neque fuga error sit aliquid voluptates doloremque molestias?</p>
+</body>
+
+
+
+
+</html>

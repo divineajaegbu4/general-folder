@@ -1,0 +1,63 @@
+.header {
+  background-color: #8a2b06;
+  color: white;
+  padding: 0 5rem;
+  font-size: 1.2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 6rem;
+}
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebarIcon {
+  position: relative;
+  top: 15%;
+  left: -4%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+.headerLink .firstPage {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 534px) {
+  .header {
+    font-size: 1rem;
+  }
+  .sidebarIcon {
+    display: block;
+  }
+  .sidebar {
+    background-color: rgba(0, 0, 0, 0.837);
+    width: 125%;
+    overflow-x: hidden;
+    padding: 1rem 0.5rem;
+    height: 12rem;
+    transform: translate(-80px, 10px);
+  }
+  .block {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
+}
+.order {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.order:hover,
+.order:active {
+  color: rgba(245, 245, 245, 0.735);
+  cursor: pointer;
+}

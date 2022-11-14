@@ -1,0 +1,43 @@
+.header {
+  position: relative;
+}
+.header button {
+  font: inherit;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.header button:hover,
+.header .link:hover {
+  background-color: #c291e2;
+  color: #38015c;
+}
+.header nav {
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  position: relative;
+  left: 2rem;
+}
+.header .link {
+  font: inherit;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5rem;
+}
+.header li {
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 627px) {
+  .header li {
+    transform: translateX(-1.8rem);
+  }
+} ;

@@ -1,0 +1,447 @@
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Roboto:ital,wght@0,100;1,400&family=Shizuru&family=Source+Sans+Pro&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,300;0,600;0,700;1,100;1,500;1,700&family=Open+Sans+Condensed:wght@700&family=Roboto:ital,wght@0,100;1,400&family=Shizuru&family=Source+Sans+Pro&display=swap');
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    body {
+        font-family: "Montserrat", sans-serif;
+        background: white;
+        background-image: linear(white);
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+    }
+    
+    html,
+    body {
+        min-height: 100%;
+        min-width: 100%;
+        /* overflow-x: hidden; */
+    }
+    
+    aside {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(3fr, 2fr));
+    }
+    /* grand parents of logos */
+    
+    .digital-skill-academy .container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(10px, auto));
+        justify-content: space-between;
+    }
+    /* parent of logos */
+    
+    .container-link {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -8rem 0 0 0;
+        /* width: 300px; */
+        justify-content: space-around;
+        text-decoration: none;
+        align-items: center;
+    }
+    /* d logo */
+    
+    .container-link .logo {
+        font-size: 7.5rem;
+        font-weight: bolder;
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+    /* line between two logos */
+    
+    .container-link .logo::after {
+        content: "";
+        border: 2px solid transparent;
+        margin-left: 0.5rem;
+        border-image: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        border-image-slice: 1;
+    }
+    /* digital-skills-academy-logo */
+    
+    .container-link .logo-digital {
+        font-size: 2.3rem;
+        line-height: 0.9;
+        font-weight: bolder;
+        text-transform: uppercase;
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+    /* LIST-LINKS-GOES-HERE */
+    
+    .container .list-links {
+        text-decoration: none;
+        list-style: none;
+        display: grid;
+        height: 55%;
+        grid-template-columns: repeat(1, 300px);
+        align-content: center;
+        font-size: 1.3rem;
+        padding: 0 2rem 0 0;
+    }
+    
+    .container .list-links li {
+        font-weight: bolder;
+        color: black;
+    }
+    
+    .container .list-links .question {
+        grid-column-start: 2;
+    }
+    
+    .container .list-links .active {
+        padding: 0 0 0 6rem;
+        width: 400%;
+    }
+    /* parts */
+    
+    .part {
+        margin-top: -13rem;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        font-size: 1.3rem;
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        background-clip: text;
+        background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+    /* section2 */
+    
+    section .section-container ul {
+        list-style: none;
+        /* display: flex; */
+    }
+    
+    section {
+        padding: 2.5rem;
+        margin-top: -5rem;
+        /* background-color: rgb(18, 35, 61); */
+        background-color: rgba(18, 35, 61, 0.87);
+        height: 90px;
+        position: sticky;
+        top: 0;
+    }
+    
+    section .section-container .menu {
+        text-decoration: none;
+        display: none;
+    }
+    
+    section .section-container ul {
+        display: grid;
+        grid-template-columns: 150px 230px 180px 90px 170px 500px;
+        justify-content: center;
+        grid-gap: 30px;
+        margin-top: -7px;
+        position: relative;
+        z-index: 100;
+    }
+    
+    .section-container ul .courses,
+    .section-container ul .employers {
+        position: relative;
+        z-index: -1
+    }
+    
+    .section-container ul li:not(.hover li,
+    .input,
+    .contact)::before {
+        content: "";
+        border: 1px solid white;
+        padding: 0.5rem 0;
+        position: relative;
+        left: 105%;
+    }
+    
+    section .section-container ul a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: white;
+    }
+    
+    section .section-container .hover {
+        width: 170%;
+        background: white;
+        padding: 0 0.2rem 0 0.2rem;
+        box-shadow: 3px 3px 5px black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: none;
+    }
+    
+    section .section-container .hover a {
+        color: #444444ca;
+        line-height: 1.5;
+    }
+    /*     
+    section .section-container .input input {
+        padding: 0.5rem 7rem 0.5rem 0.5rem;
+        border: 0;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+    
+    section .section-container .input ion-icon {
+        font-size: 1.8rem;
+        transform: translate(270px, 9px);
+        color: rgba(0, 0, 255, 0.692);
+        -webkit-transform: translate(270px, 9px);
+        -moz-transform: translate(270px, 9px);
+        -ms-transform: translate(270px, 9px);
+        -o-transform: translate(270px, 9px);
+    } */
+    /* section .section-container .input {
+        margin-top: -0.7rem;
+    }
+     */
+    
+    section .section-container .input input::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    section .section-container .courses-link:hover .hover {
+        display: block;
+    }
+    
+    section .section-container .courses-employers:hover .hover {
+        display: block;
+    }
+    
+    section .section-container ul li a:not(.hover li a):hover,
+    section .section-container ul li a:not(.hover li a):active {
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        padding: 0.7rem;
+        border-radius: 30px;
+    }
+    
+    section .section-container ul .employers,
+    section .section-container ul .courses {
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        padding: 0.7rem;
+        border-radius: 30px;
+    }
+    /* section 3 */
+    
+    .training-solution-container {
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        padding: 2rem 0 0.5rem 0;
+    }
+    
+    .training-solution-container h1 {
+        text-transform: uppercase;
+        width: 90%;
+        font-size: 4.5rem;
+        color: white;
+        padding: 0 1.5rem;
+        line-height: 1;
+    }
+    /* delivered */
+    
+    .delivered p {
+        padding: 1.5rem;
+        font-family: "Josefin Slab", sans-serif;
+        font-weight: 600;
+        font-size: 2.2rem;
+        opacity: 0.8;
+    }
+    /* image */
+    
+    .image {
+        padding: 1.5rem;
+        margin-top: -4rem;
+    }
+    
+    .image p {
+        font-size: 1.3rem;
+    }
+    /* figure */
+    
+    figure p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.3rem;
+    }
+    
+    figure p:nth-child(3),
+    figure p:nth-child(6),
+    figure p:nth-child(8) {
+        font-weight: bolder;
+    }
+    /* links */
+    
+    ol {
+        list-style-type: none;
+    }
+    
+    ol li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        line-height: 2;
+        color: purple;
+    }
+    
+    ol li a:hover {
+        color: rgba(0, 0, 139, 0.808);
+    }
+    /* footer */
+    
+    footer {
+        margin-top: 7rem;
+        background-color: rgba(18, 35, 61, 0.863);
+    }
+    
+    footer .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 400px));
+        padding: 2rem;
+        grid-gap: 70px;
+    }
+    
+    .footer-container .form {
+        display: flex;
+        flex-direction: column
+    }
+    
+    .footer-container .form label {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        color: white;
+    }
+    
+    .footer-container .form .reason {
+        color: rgba(245, 245, 245, 0.561);
+    }
+    
+    .footer-container .form input,
+    select {
+        padding: 1.5rem 0 1.5rem 0.2rem;
+        border: 0;
+    }
+    
+    .footer-container .form input::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .footer-container .form a {
+        text-decoration: none;
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        width: 10%;
+        padding: 0.5rem 3rem;
+        border-radius: 50px;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 3px black;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    
+    .footer-container .form a:hover {
+        box-shadow: 4px 4px 7px white, -4px -4px 7px white;
+        transform: scale(2, 5);
+        transition: all 1s ease-in-out;
+        -webkit-transform: scale(2, 5);
+        -moz-transform: scale(2, 5);
+        -ms-transform: scale(2, 5);
+        -o-transform: scale(2, 5);
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+    }
+    
+    .footer-container .form .link-input {
+        margin-top: 2rem;
+    }
+    
+    .footer-container .icons .main-links {
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+    
+    .footer-container .icons .main-links a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: white;
+    }
+    
+    .footer-container .icons .directions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .footer-container .icons .directions a {
+        margin-left: 2rem;
+    }
+    
+    .footer-container .icons .directions a ion-icon {
+        color: black;
+        font-size: 1.7rem;
+        background: white;
+        padding: 1rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+    
+    .footer-container .form select:optional {
+        font-size: 1.2rem;
+    }
+    
+    .footer-container .icons {
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+        justify-content: space-between;
+        padding-top: 2rem;
+    }
+    
+    .footer-container .digital-skill {
+        padding: 0 1rem;
+        margin-top: 5rem;
+    }
+    
+    .footer-container .digital-skill p span {
+        font-weight: bolder;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+    }
+    
+    .footer-container .digital-skill p {
+        font-size: 1.5rem;
+        width: 300%;
+        font-family: "Roboto", sans-serif;
+        color: white;
+    }
+    
+    .footer-container .whitespace {
+        white-space: pre-line;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        font-size: 1.5rem;
+    }

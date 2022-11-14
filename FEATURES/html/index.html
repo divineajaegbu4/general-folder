@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Html</title>
+</head>
+<style>
+     :root {
+        --color: cadetblue;
+    }
+    
+    body {
+        background-color: var(--color);
+    }
+    
+    .search-box {
+        display: flex;
+        height: 50vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-box input {
+        width: 20%;
+    }
+    
+    .experiment {
+        background: red;
+        width: 150px;
+        height: 150px;
+        color: white;
+        position: relative;
+        animation: slideIn 5s ease-in-out infinite;
+    }
+    
+    @keyframes slideIn {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: 100%;
+        }
+    }
+    
+    .experiment:hover {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        cursor: pointer;
+    }
+    
+    .experiment.experiment {
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <h1>HTML: Hypertext Markup Language.</h1>
+    <details>
+        <summary>divine</summary>
+        <p>jfioujep[p;w 'd.;,mknjcud'
+        </p>
+    </details>
+    <progress></progress>
+    <datalist>
+        watch
+    </datalist>
+    <textarea>jffjifu[polfj</textarea>
+    <input type="radio" checked>
+    <input type="color" value="#ff0000">
+
+    <div class="search-box">
+        <input type="text" placeholder="Search anything you want.">
+    </div>
+
+    <div class="experiment">
+        <h1>ALBERT</h1>
+    </div>
+</body>
+
+</html>

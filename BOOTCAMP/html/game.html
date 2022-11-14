@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<body>
+
+    <head>
+        <title>animation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <style>
+            .div1 {
+                background-image: conic-gradient(orange, yellow, green, pink, blue);
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                position: relative;
+                animation: example 2s infinite;
+                animation-direction: alternate;
+                animation-fill-mode: both;
+            }
+            
+            @keyframes example {
+                from {
+                    top: 0;
+                }
+                to {
+                    top: 1500px;
+                    animation-timing-function: linear;
+                }
+            }
+            
+            h1 {
+                background-image: conic-gradient(orange, yellow, green, pink, blue);
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                animation: 50s infinite;
+            }
+            
+            input {
+                background-color: green;
+                width: max-content;
+                color: white;
+                padding: 0;
+                font-size: 20px;
+                border-radius: 10px;
+            }
+            
+            .image {
+                width: 30%;
+                height: 40%;
+                transform: translate(80%, 50%);
+                -webkit-box-reflect: left 10%;
+                object-fit: fill;
+                object-position: 80% 300%;
+            }
+            
+            .container .overlay {
+                background-color: lightgreen;
+                color: white;
+                width: 30%;
+                height: 0;
+                transition: .5s ease;
+                text-align: center;
+                font-size: 18px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                top: 100%;
+                right: 0;
+                text-align: center;
+                transform: translate(265px, 116px);
+                visibility: hidden;
+            }
+            
+            .text {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                overflow: hidden;
+            }
+            
+            .container:hover .overlay {
+                top: 0;
+                height: 31%;
+                visibility: visible;
+            }
+            
+            .container1 {
+                position: relative;
+                background-color: blue;
+                color: white;
+                width: max-content;
+                padding: 2% 10% 2% 10%;
+                border-radius: 5px;
+                transform: translate(200%, 300%);
+            }
+            /* to position the tooltip */
+            
+            .tooltiptext {
+                position: absolute;
+                background-color: orange;
+                color: white;
+                border-radius: 5px;
+                padding: 4% 7% 4% 7%;
+                top: 150%;
+                right: 30%;
+                z-index: 1;
+                opacity: 0
+            }
+            /* to create the arrow tooltip */
+            
+            .container1 .tooltiptext::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                z-index: 1;
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent transparent orange transparent;
+            }
+            
+            .container1:hover .tooltiptext {
+                opacity: 1;
+                transition: opacity 2s;
+            }
+            
+            .column {
+                column-count: 3;
+                column-gap: 50px;
+                column-rule: 1px solid black;
+                column-width: 100px;
+                column-span: all;
+                column-fill: balance;
+                position: absolute;
+                top: 70%;
+                outline: 2px dotted black;
+                resize: both;
+                outline-offset: 20px;
+            }
+            
+            .flexbox {
+                display: flex;
+            }
+        </style>
+    </head>
+</body>
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Avatar" class="image">
+    <div class="overlay">
+        <div class="text">Hello World</div>
+    </div>
+</div>
+
+<div class="flexbox">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+</div>
+
+<div class="container1">tooltip<span class="tooltiptext">this is me!</span></div>
+
+
+<div class="column">this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br>    this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br>    this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br> this is me and am learning programming<br>
+</div>
+<h1 class="animate__animated animate__backInDown"></h1>
+<button id="myButton">My button</button>
+<input type="submit" value="Submit" id="submit">
+
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    // With the above scripts loaded, you can call `tippy()` with a CSS
+    // selector and a `content` prop:
+    tippy('#myButton', {
+        content: 'My tooltip!',
+    });
+
+    tippy('#submit', {
+        content: 'This my own tooltip and i like it',
+        animation: 'rubberBand',
+        arrows: true,
+        placement: 'bottom-start',
+    });
+</script>
+
+
+</body>
+// With the above scripts loaded, you can call `tippy()` with a CSS
+
+</html>

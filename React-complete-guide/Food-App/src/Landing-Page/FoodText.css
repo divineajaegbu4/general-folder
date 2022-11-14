@@ -1,0 +1,13 @@
+.container-guide {
+  background-image: url("https://www.freevector.com/uploads/vector/preview/5181/FreeVector-Waving-Lines-Layout.jpg");
+  background-size: cover;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-color: #dd2476;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transform: translateY(-1.2rem);
+  color: rgba(255, 255, 255, 0.808);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}

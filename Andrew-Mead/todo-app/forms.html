@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<style>
+    body {
+        /* display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 400px;
+        height: 30vh;
+        flex-wrap: wrap;
+        align-content: space-around;
+        margin: auto; */
+        background: crimson;
+    }
+</style>
+<body>
+
+    <div id="v"></div>
+
+    <input id="includes-text" type=" text" placeholder="text">
+    <label>
+        <input class="for-fun" type="checkbox"> Check me for fun
+    </label>
+
+    <div class="empty-div">
+        source income
+    </div>
+    <form id="form-text">
+        <input type="text" placeholder="firstName" name="LastName">
+        <button>Submit</button>
+    </form>
+
+    <form id="todos-text">
+        <input type="text" placeholder="text" name="text">
+        <button>Submit form</button>
+    </form>
+
+    <select name="options" id="selection">
+        <option value="byCreated">Sort by last created</option>
+        <option value="byedited">Sort by recently edited</option>
+        <option value="byAlphabetically">Sort by Alphabetically</option>
+    </select>
+
+
+    <script src="../todo-app/scripts/uuidv4.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js">
+    </script>
+    <script src="../todo-app/note-functions.js">
+    </script>
+
+    <script src=" ../todo-app/forms.js">
+    </script>
+
+</body>
+</html>

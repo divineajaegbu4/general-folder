@@ -1,0 +1,129 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-image: radial-gradient(closest-side, white, rgba(102, 151, 241, 0.52));
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+}
+
+header {
+    box-shadow: 3px 3px 4px black;
+    background-image: linear-gradient(rgba(100, 148, 237, 0.034), rgba(100, 148, 237, 0.144));
+}
+
+header h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    border-radius: 40px;
+    text-shadow: 3px 3px 4px #444444;
+}
+
+nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 150px));
+    width: 37%;
+    grid-gap: 0 40px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+nav ul li {
+    font-size: 1.5rem;
+}
+
+nav ul li span {
+    font-size: 2.3rem;
+    color: darkred;
+    animation: color 3s infinite alternate;
+    -webkit-animation: color 3s infinite alternate;
+}
+
+@keyframes color {
+    from {
+        transform: scaleX(0);
+        color: yellow;
+    }
+
+    to {
+        transform: scaleX(5);
+        color: crimson;
+    }
+}
+
+nav ul li:last-child {
+    animation: rotate 6s infinite linear alternate-reverse;
+    text-align: center;
+    background: darkred;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    position: relative;
+    left: 20%;
+    transition: rotateZ 2s linear;
+    -webkit-animation: rotate 6s infinite linear alternate-reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(1200deg);
+        -webkit-transform: rotateZ(1200deg);
+        -moz-transform: rotateZ(1200deg);
+        -ms-transform: rotateZ(1200deg);
+        -o-transform: rotateZ(1200deg);
+    }
+}
+
+figure div img {
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #444444;
+}
+
+figure div img:last-child {
+    display: none;
+}
+
+
+figure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 150px));
+    width: 50%;
+    justify-content: center;
+    grid-gap: 0 10px;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 2px 2px 4px #444444, -2px -2px 4px #444444;
+    border-radius: 30px;
+    margin: auto;
+    background: linear-gradient(rgba(100, 148, 237, 0.281), rgba(100, 148, 237, 0.281));
+}

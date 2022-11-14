@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+}
+.containerZigaDescription {
+  position: relative;
+  width: 630px;
+  height: 845px;
+  left: 0px;
+  top: 0px;
+  background: radial-gradient(
+    81.02% 97.75% at 19.37% 18.98%,
+    rgba(0, 124, 238, 0.1) 0%,
+    rgba(255, 5, 5, 0.1) 100%
+  );
+}
+.containerZigaDescription > .logo,
+.containerZigaDescription > .textDescription {
+  position: relative;
+  left: 2rem;
+  top: 2rem;
+}
+.containerZigaDescription > .textDescription {
+  color: black;
+  line-height: 1.6;
+  margin-top: 3rem;
+}

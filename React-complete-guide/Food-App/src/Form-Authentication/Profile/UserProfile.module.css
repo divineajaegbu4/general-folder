@@ -1,0 +1,68 @@
+.profile {
+  margin: 3rem auto;
+  text-align: center;
+}
+.containerForm {
+  background-color: rgba(229, 229, 229, 0.945);
+  height: 200vh;
+}
+.profile h1 {
+  font-size: 5rem;
+}
+.formProfile {
+  background-color: #8a2b06;
+  padding: 0 7rem;
+  font-size: 1.5rem;
+  height: 6rem;
+  color: white;
+}
+.formProfileLink {
+  text-decoration: none;
+  color: white;
+  padding: 0.3rem 1.3rem;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sidebarProfile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -0.8rem;
+}
+.sidebarIconProfile {
+  position: relative;
+  top: 15%;
+  left: -4%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 534px) {
+  .header {
+    font-size: 1rem;
+  }
+  .sidebarIconProfile {
+    display: block;
+    position: relative;
+    top: 30%;
+  }
+  .sidebarProfile {
+    background-color: rgba(0, 0, 0, 0.837);
+    min-width: 140%;
+    overflow-x: hidden;
+    padding: 1rem 0.5rem;
+    height: 14rem;
+    transform: translate(-120px, 68px);
+  }
+  .block {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
+}

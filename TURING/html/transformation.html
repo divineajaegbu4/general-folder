@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation</title>
+</head>
+<style>
+    .container .box1 {
+        background-color: red;
+        width: 150px;
+        height: 150px;
+        /* transform: scaleX(3); */
+        /* transform: scaleY(-5); */
+        /* transform: skew(-20deg, -20deg); */
+        /* overflow: hidden; */
+        transform: rotateX(50deg);
+        /* transform: translateZ(-150px); */
+        /* perspective: 2000px; */
+    }
+
+    .container {
+        /* overflow: hidden; */
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+        transform-style: preserve-3d;
+    }
+
+    .container2 .box2 {
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+        /* transform: skew(30deg, 30deg); */
+        /* transform: rotateY(20deg); */
+    }
+
+    /* .container2 {
+        /* perspective: 20px; */
+
+    .container3 .box3 {
+        background-color: crimson;
+        width: 150px;
+        height: 150px;
+        /* transform: skew(-50deg, ); */
+        /* transform: rotateZ(-70deg); */
+    }
+
+    .containers {
+        padding: 3rem 12rem;
+        /* border: 2px solid black; */
+    }
+
+    .clone {
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <div class="boxes ">
+        <div class="container containers">
+            <div class="box1 clone">
+
+            </div>
+        </div>
+
+        <div class="container2 containers">
+            <div class="box2 clone">
+
+            </div>
+        </div>
+
+        <div class="container3 containers">
+            <div class="box3 clone">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnakeGame</title>
+</head>
+<body>
+    <div class="score"></div>
+   <canvas class="SnakeGame" width="700px" height="700px"></canvas> 
+
+
+
+   <script>
+    var canvas = document.querySelector(".SnakeGame");
+    var ctx = canvas.getContext("2d");
+
+    var createRender = document.querySelector(".score")
+    
+    // Declare variables
+    
+    var strokeBackground = "gray";
+    var colorBackgroundSnake = "crimson";
+    var foodBackground = "pink";
+    var foodStrokeBackground = "purple";
+    var backgroundGame = "black";
+    
+    
+    var score = 0;
+    
+    var changingDirection = false;
+    
+    var food_y;
+    var food_x;
+    
+    var dx = 10;
+    
+    var dy = 0;
+    
+    let snake = [
+        {
+            x: 200,
+            y: 200
+        },
+    
+        {
+            x: 190,
+            y: 200
+        },
+    
+        {
+            x: 180,
+            y: 200
+        },
+    
+        {
+            x: 170,
+            y: 200
+        },
+    
+        {
+            x: 160,
+            y: 200
+        }
+    ]
+
+    /*time out(in browser feature(API) called "timer"
+    and the timer are generalFn and 100, they are the timer!)*/
+    
+    setTimeout(generalFn, 100)
+
+
+    //general function of the game
+    function generalFn() {
+
+        if(has_game_ended()) return;
+
+        changingDirection = false;
+
+        bodyGame();
+        createSnake();
+        createSnakeFood();
+        requestAnimationFrame(generalFn)
+    }
+
+    function rendering(score) {
+
+        var createNewElement = document.createElement("p");
+        createNewElement.innerHTML = score;
+
+        return createNewElement;
+    }
+
+    createRender.appendChild(rendering("score"))//Execute the function of rendering
+
+
+//background color of the snakeGame
+    function bodyGame() {
+
+        ctx.fillStyle = backgroundGame;
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+    }
+
+//create snake 
+
+function createSnake() {
+
+    ctx.fillStyle = colorBackgroundSnake;
+    ctx.strokeStyle = strokeBackground;
+    ctx.fillRect(dx, dx, canvas.width / canvas.width + dx, canvas.height/canvas.height + dx);
+    ctx.strokeRect(dx, dx, canvas.width / canvas.width + dx, canvas.height/canvas.height + dx);
+}
+
+
+//create snake food
+function createSnakeFood() {
+    ctx.fillStyle = foodBackground;
+    ctx.strokeStyle = foodStrokeBackground;
+    ctx.fillRect(dx * 30, dx  * 30, canvas.width / canvas.width + dx, canvas.height/canvas.height + dx);
+    ctx.strokeRect(dx * 30, dx  * 30, canvas.width / canvas.width + dx, canvas.height/canvas.height + dx);
+
+    
+}
+
+
+function has_game_ended() {
+
+    for(let i = 4; i < snake.length; i++) {
+
+        if(snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
+            return true;
+        }
+
+        //hit to ended;
+        var hitLeftWall = snake[0].x < 0;
+        var hitRightWall = snake[0].x > canvas.width - 10;
+        var hitTopWall = snake[0].y < 0;
+        var hitDownWall = snake[0].y > canvas.height - 10;
+
+        return hitLeftWall || hitRightWall || hitTopWall || hitDownWall;
+    }
+
+
+}
+
+//random food;
+
+function randomFood(max, min) {
+
+    return Math.round( Math.random() * (max - min) / dx) * dx;
+}
+
+function genFood() {
+
+    food_x = randomFood(canvas.width - dx, 0);
+    food_y = randomFood(canvas.height - dx, 0);
+
+
+    snake.forEach(function hasSnakeEatenFood(part) {
+
+        const hasEaten = part.x == food_x && part.y == food_y;
+
+        if(hasEaten) genFood();
+    })
+}
+
+
+//Add EventListener here
+
+document.body.addEventListener("keydown", changeDirection);
+
+
+
+function changeDirection(e) {
+
+    var leftKey = 37;
+    var rightKey = 39;
+    var upKey = 38;
+    var downKey = 40;
+
+
+
+    if ( changeDirection) return;
+
+    changeDirection = true;
+
+    var keyPressed = event.keyCode;
+    var goingUp = dy === -10;
+    var goingDown = dy === 10;
+    var goingRight = dx === 10;
+    var goingLeft = dx === -10;
+
+
+    if (keyPressed ===leftKey && !goingRight) {
+        dx = -10;
+        dy = 0;
+    }
+
+    if (keyPressed === rightKey && !goingDown) {
+
+        dx = 10;
+        dy = 0;
+    }
+
+    if (keyPressed === upKey && !goingRight) {
+
+        dy = -10;
+        dx = 0;
+    }
+
+    if (keyPressed === downKey && !goingLeft) {
+
+        dy = 10;
+        dx = 0;
+    }
+}
+
+
+function move_snake() {
+
+    var head = {x: snake[0].x + dx, y: snake[0].y + dy}
+
+    snake.unshift(head);
+
+    var has_eaten_food = snake[0].x === food_x && snake[0].y === food_y;
+
+    if(has_eaten_food) {
+
+        score += 1;
+
+        document.getElementById("score").innerHTML = score;
+
+        genFood();
+
+    }
+
+    else {
+        snake.pop();
+    }
+
+}
+
+
+
+
+
+
+     
+    
+    
+    
+    
+    
+    
+   </script>
+</body>
+</html>

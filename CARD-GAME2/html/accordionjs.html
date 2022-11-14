@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/accordionjs.css">
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="content-box">
+            <div class="label">List one</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione qui deserunt, delectus in accusantium fuga perferendis repudiandae repellat, nemo nostrum officia! Nostrum aspernatur quia assumenda veniam rem nesciunt suscipit. Vitae voluptas
+                    pariatur laudantium porro totam, consequatur ipsum, at aliquam explicabo expedita quidem, inventore aperiam esse vel nulla? Enim, aperiam odio? Vitae nulla cum quam qui quisquam ullam nihil voluptatum. Nulla commodi explicabo fugiat
+                    hic sint aspernatur facilis, voluptatum pariatur, dolore, ipsum a laboriosam repellendus eos velit voluptas consequuntur ab unde numquam aperiam odit non quaerat omnis perspiciatis. Odio, id.
+                </p>
+            </div>
+        </div>
+
+        <!-- list two -->
+        <div class="content-box">
+            <div class="label">List one</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione qui deserunt, delectus in accusantium fuga perferendis repudiandae repellat, nemo nostrum officia! Nostrum aspernatur quia assumenda veniam rem nesciunt suscipit. Vitae voluptas
+                    pariatur laudantium porro totam, consequatur ipsum, at aliquam explicabo expedita quidem, inventore aperiam esse vel nulla? Enim, aperiam odio? Vitae nulla cum quam qui quisquam ullam nihil voluptatum. Nulla commodi explicabo fugiat
+                    hic sint aspernatur facilis, voluptatum pariatur, dolore, ipsum a laboriosam repellendus eos velit voluptas consequuntur ab unde numquam aperiam odit non quaerat omnis perspiciatis. Odio, id.
+                </p>
+            </div>
+        </div>
+
+        <!-- list-three -->
+
+        <div class="content-box">
+            <div class="label">List one</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione qui deserunt, delectus in accusantium fuga perferendis repudiandae repellat, nemo nostrum officia! Nostrum aspernatur quia assumenda veniam rem nesciunt suscipit. Vitae voluptas
+                    pariatur laudantium porro totam, consequatur ipsum, at aliquam explicabo expedita quidem, inventore aperiam esse vel nulla? Enim, aperiam odio? Vitae nulla cum quam qui quisquam ullam nihil voluptatum. Nulla commodi explicabo fugiat
+                    hic sint aspernatur facilis, voluptatum pariatur, dolore, ipsum a laboriosam repellendus eos velit voluptas consequuntur ab unde numquam aperiam odit non quaerat omnis perspiciatis. Odio, id.
+                </p>
+            </div>
+        </div>
+
+        <!-- list four -->
+
+        <div class="content-box">
+            <div class="label">List one</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione qui deserunt, delectus in accusantium fuga perferendis repudiandae repellat, nemo nostrum officia! Nostrum aspernatur quia assumenda veniam rem nesciunt suscipit. Vitae voluptas
+                    pariatur laudantium porro totam, consequatur ipsum, at aliquam explicabo expedita quidem, inventore aperiam esse vel nulla? Enim, aperiam odio? Vitae nulla cum quam qui quisquam ullam nihil voluptatum. Nulla commodi explicabo fugiat
+                    hic sint aspernatur facilis, voluptatum pariatur, dolore, ipsum a laboriosam repellendus eos velit voluptas consequuntur ab unde numquam aperiam odit non quaerat omnis perspiciatis. Odio, id.
+                </p>
+            </div>
+        </div>
+
+        <!-- list five -->
+
+        <div class="content-box">
+            <div class="label">List one</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione qui deserunt, delectus in accusantium fuga perferendis repudiandae repellat, nemo nostrum officia! Nostrum aspernatur quia assumenda veniam rem nesciunt suscipit. Vitae voluptas
+                    pariatur laudantium porro totam, consequatur ipsum, at aliquam explicabo expedita quidem, inventore aperiam esse vel nulla? Enim, aperiam odio? Vitae nulla cum quam qui quisquam ullam nihil voluptatum. Nulla commodi explicabo fugiat
+                    hic sint aspernatur facilis, voluptatum pariatur, dolore, ipsum a laboriosam repellendus eos velit voluptas consequuntur ab unde numquam aperiam odit non quaerat omnis perspiciatis. Odio, id.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const accordion = document.getElementsByClassName('content-box');
+
+
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function() {
+                this.classList.toggle('active');
+            })
+        }
+    </script>
+</body>
+
+</html>

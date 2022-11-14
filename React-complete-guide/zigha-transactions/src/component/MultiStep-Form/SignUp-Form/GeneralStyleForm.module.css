@@ -1,0 +1,122 @@
+.containerForm {
+  display: flex;
+  justify-content: space-between;
+}
+.createAccount {
+  position: relative;
+  top: 6rem;
+  left: -2rem;
+}
+.input,
+select {
+  padding: 0.8rem;
+  outline: none;
+  border: 1px solid rgb(224, 216, 216);
+  border-radius: 3px;
+  text-align: center;
+}
+.inputTitle {
+  /* font-family: "Nexa"; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 143%;
+
+  color: #000d09;
+}
+.createAccount .inputName {
+  padding: 0.6rem;
+}
+
+.placeholder {
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.placeholder::after {
+  position: absolute;
+  left: 1px;
+  background-color: rgb(199, 187, 187);
+  padding: 0.7rem 1.5rem;
+  top: 1px;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  opacity: 0.2;
+}
+.createAccount .number .input,
+.createAccount .email .input {
+  width: 27rem;
+}
+.containerFormInput {
+  display: flex;
+  width: 30rem;
+  flex-wrap: wrap;
+}
+.personalInformation {
+  margin-top: -0.5rem;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: gray;
+}
+button {
+  margin-top: 2rem;
+  transform: translateX(0.5rem);
+  background-color: #04103d;
+  width: 27.5rem;
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 520;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.haveAccount {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem; /* Have an account already? Log In */
+  color: #5a646a;
+}
+.haveAccount a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000d09;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* CREATE PASSWORD */
+.createPassword {
+  position: relative;
+  top: 6rem;
+  left: -2rem;
+}
+.createPasswordInput {
+  margin-top: 3rem;
+}
+.spacing {
+  margin-bottom: 35px;
+}
+.spacing .inputWidth,
+select {
+  width: 27rem;
+}
+.createPasswordButton {
+  transform: translateX(-0.2rem);
+}
+
+/*CREATE PIN*/
+.createPIN {
+  position: relative;
+  top: 6rem;
+  left: -4rem;
+}

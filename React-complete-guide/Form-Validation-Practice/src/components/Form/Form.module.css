@@ -1,0 +1,42 @@
+.form__container {
+  display: grid;
+}
+
+.form__container--general {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+  height: 40vh;
+  justify-content: center;
+  line-height: 2;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.339);
+  padding: 0 5rem;
+  margin-top: 20px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.form__container--general input {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  outline: 0;
+}
+.form__container--general .button {
+  width: 100px;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(100, 7, 100);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 2px 2px 4px rgb(102, 91, 91);
+  transform: scale(1, 1.2);
+  cursor: pointer;
+}
+
+.appends {
+  background: red;
+}

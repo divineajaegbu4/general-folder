@@ -1,0 +1,664 @@
+            * {
+                box-sizing: border-box;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .digital-skills-Academy {
+                display: flex;
+                width: 320px;
+                justify-content: space-between;
+                height: 20vh;
+                align-items: center;
+            }
+            
+            .digital-skills-Academy h1 {
+                font-size: 8rem;
+                background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                -moz-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-text-fill-color: transparent;
+                -webkit-text-fill-color: transparent;
+                /* background-image: linear-gradient(#Df73ff, #6f2da8); */
+            }
+            
+            .digital-skills-Academy h1 span {
+                border-left: 2px solid transparent;
+                margin-left: 0.9rem;
+                border-image: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                border-image-slice: 1;
+            }
+            
+            .digital-skills-Academy p {
+                font-weight: 500;
+                font-size: 2.5em;
+                font-family: sans-serif;
+                /* text-shadow: 1px 1px 4px rgba(48, 101, 175, 1), -1px -1px 8px rgba(143, 191, 33, 1); */
+                margin-left: 10px;
+                background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                -moz-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-text-fill-color: transparent;
+                -webkit-text-fill-color: transparent;
+                line-height: 35px;
+            }
+            
+            .digital-skills-Academy p span {
+                font-weight: bolder;
+            }
+            
+            main {
+                display: flex;
+                margin-left: 1.5rem;
+            }
+            
+            main ul {
+                margin-left: 550px;
+                font-family: sans-serif;
+                font-size: 1.3rem;
+                width: 30vw;
+                text-align: center;
+                list-style-type: none;
+            }
+            
+            main ul li:last-child {
+                width: 150%;
+            }
+            
+            main ul li:nth-child(1),
+            main ul li:nth-child(2) {
+                transform: translate(170px);
+            }
+            
+            .parts p {
+                text-transform: uppercase;
+                font-size: 1.8rem;
+                letter-spacing: 10px;
+                background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                -moz-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-text-fill-color: transparent;
+                -webkit-text-fill-color: transparent;
+                margin-left: 1.5rem;
+                margin-top: 0.2rem;
+            }
+            
+            section {
+                background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+            }
+            /* stage2 */
+            
+            aside ul {
+                list-style: none;
+            }
+            
+            aside a {
+                text-decoration: none;
+                font-size: 1.3em;
+                font-family: sans-serif;
+                color: white;
+                font-weight: bolder;
+            }
+            
+            aside {
+                display: flex;
+                transform: translate(-50px);
+                background-color: rgb(18, 35, 61);
+                width: 150%;
+                padding: 1.5rem;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            
+            aside li:after {
+                content: "";
+                border: 1px solid white;
+                margin-left: 30px;
+                padding: 1.5rem 0;
+            }
+            
+            aside .active:after {
+                content: "";
+                border: 0;
+            }
+            
+            aside a:hover,
+            aside a:active {
+                background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                padding: 0.5rem;
+                border-radius: 25px;
+            }
+            
+            aside #courses:hover,
+            aside #employers:hover {
+                border-radius: 0;
+            }
+            
+            aside #courses,
+            aside #employers {
+                background: linear-gradient( to bottom, rgb(196, 255, 59), rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                padding: 0.5rem;
+                border-radius: 25px;
+                cursor: pointer
+            }
+            /* menu opacity */
+            
+            .menu {
+                opacity: 0;
+            }
+            /* input and ion-icon */
+            
+            .search {
+                margin: 7px 0 0 80px;
+            }
+            
+            .search input {
+                padding: 0.7rem 7rem 0.7rem 0.5rem;
+                border: 0;
+                border-radius: 3px;
+            }
+            
+            .search ion-icon {
+                transform: translate(290px, 7px);
+                font-size: 1.4em;
+                color: rgba(0, 0, 255, 0.397);
+                font-size: 1.8rem;
+            }
+            
+            .search input::placeholder {
+                font-size: 1.2em;
+                font-weight: bolder;
+                font-family: sans-serif;
+            }
+            /* hovering span */
+            
+            #clone li span {
+                position: absolute;
+                top: 70%;
+                left: 25.5%;
+                background-color: white;
+                color: rgba(0, 0, 0, 0.815);
+                padding: 1rem;
+                opacity: 0.7;
+                box-shadow: 2px 2px 2px whitesmoke, -2px -2px 2px whitesmoke;
+                font-family: sans-serif;
+                opacity: 0;
+            }
+            
+            #scope li span {
+                background: transparent;
+                position: absolute;
+                top: 70%;
+                left: 3%;
+                line-height: 30px;
+                background-color: white;
+                color: rgba(0, 0, 0, 0.767);
+                padding: 1rem;
+                opacity: 0.7;
+                box-shadow: 2px 2px 2px whitesmoke, -2px -2px 2px whitesmoke;
+                font-family: sans-serif;
+                opacity: 0;
+            }
+            
+            #scope li:hover span {
+                opacity: 1;
+                transition: all 2s ease-in-out;
+            }
+            
+            #clone li:hover span {
+                opacity: 1;
+                transition: all 2s ease-in-out;
+            }
+            /* training business supports section */
+            
+            .support {
+                font-size: 2.7rem;
+                background: linear-gradient( 90deg, rgb(199, 255, 69), rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                padding: 2rem 2rem;
+                color: white;
+                font-family: sans-serif;
+                position: absolute;
+                top: 35%;
+                z-index: -1;
+                margin-left: -2rem;
+            }
+            /* supporting your business and bespoke section */
+            
+            .delivered p:first-child {
+                margin: 22rem 0 0 2rem;
+                line-height: 60px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 2rem;
+            }
+            
+            .delivered p:last-child {
+                margin: 3rem 0 0 2rem;
+                font-size: 1.3rem;
+                font-family: sans-serif;
+            }
+            /* phil-widdoson section */
+            
+            .phil-widdowson-text p {
+                font-size: 0.9rem;
+                /* font-family: sans-serif; */
+                font-family: 'montserratlight';
+                margin: 3rem 0 0 2.5rem;
+                background: white;
+                width: 400px;
+                padding: 0.5rem;
+            }
+            
+            .phil-widdowson-text span {
+                font-weight: bold;
+            }
+            
+            .phil-widdowson-text {
+                transform: translate(0, 130px);
+            }
+            /* image section */
+            
+            figure img {
+                width: 600px;
+                object-fit: cover;
+                margin-top: -5rem;
+            }
+            /* footer */
+            
+            footer {
+                margin: 2.5rem;
+            }
+            
+            footer p {
+                font-size: 1.2rem;
+                font-weight: lighter;
+                word-spacing: 2px;
+                line-height: 1.4;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 2rem 0;
+            }
+            
+            footer p:nth-child(3),
+            footer p:nth-child(6) {
+                font-weight: bolder;
+            }
+            
+            footer p:last-child span {
+                text-decoration: underline;
+            }
+            /* ol links website */
+            
+            ol li {
+                display: flex;
+                flex-direction: column;
+                margin: 9rem 0 0 0;
+            }
+            
+            ol li a {
+                text-decoration: none;
+                margin: 2rem 0;
+                text-transform: uppercase;
+                font-size: 2.5rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                /* color: rgb(251, 211, 211); */
+            }
+            
+            ol li a:hover {
+                color: rgb(6, 6, 88);
+            }
+            /* last-website-form */
+            /* total last-website-form */
+            
+            .last-website-form {
+                margin: 6rem 0 0 -7rem;
+                display: flex;
+                width: 120%;
+                justify-content: space-between;
+                transform: translate(0, 150px);
+                height: 480px;
+                background-color: rgb(18, 35, 61);
+                padding: 0 10rem;
+            }
+            
+            .last-website-form form p:first-child {
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                letter-spacing: 3px;
+                color: white;
+            }
+            
+            .last-website-form form input:not(#submit),
+            .last-website-form select {
+                width: 120%;
+                padding: 0.8rem 0.3rem;
+            }
+            
+            .last-website-form input::placeholder {
+                font-size: 1rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                letter-spacing: 1.5px;
+            }
+            
+            .last-website-form select:optional {
+                font-size: 1.1rem;
+            }
+            
+            .last-website-form #submit {
+                padding: 0.8rem 4rem;
+                font-size: 1.3rem;
+                margin: 1rem 0;
+                border: 0;
+                background: linear-gradient( to right, rgb(196, 255, 59), rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+                border-radius: 18px;
+                color: white;
+                box-shadow: 3px 3px 7px white, -3px -3px 7px white;
+            }
+            
+            .last-website-form #submit:hover {
+                transform: scale(1.1, 1.5);
+                transition: all 3s ease-in-out;
+                cursor: pointer;
+            }
+            
+            .last-website-form input[type="email"]+p {
+                color: white;
+            }
+            /* technology-skills */
+            
+            .technology-skills span {
+                font-weight: bolder;
+                color: white;
+            }
+            
+            .technology-skills {
+                margin: 8.2rem 0 0 4rem;
+                color: rgba(255, 255, 255, 0.829);
+            }
+            
+            .technology-skills p {
+                font-size: 1.3rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                letter-spacing: 1px;
+                line-height: 1.5;
+            }
+            
+            .technology-skills p:not(span) {
+                text-align: center;
+            }
+            /* ion-icon-sites */
+            
+            .ion-icon-sites {
+                margin: 8.2rem 0.2rem 0 0;
+            }
+            
+            .ion-icon-sites div:first-child {
+                display: flex;
+                height: 10vh;
+                width: 12vw;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.2rem;
+                margin: -1.2rem 0 0 12rem;
+                color: rgb(3, 3, 27);
+            }
+            
+            .ion-icon-sites div:first-child ion-icon {
+                background: white;
+                padding: 0.8rem 0.7rem;
+                border-radius: 50%;
+                font-size: 1.5rem;
+            }
+            
+            .ion-icon-sites div:last-child a {
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0 0.4rem;
+                color: white;
+            }
+            
+            .ion-icon-sites div:last-child p {
+                font-size: 1.3rem;
+                margin-left: 0.5rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                letter-spacing: 2px;
+                line-height: 1.5;
+                color: white;
+            }
+            /* working with javascript */
+            
+            button {
+                transform: translate(4rem, -15rem);
+                padding: 0.7rem;
+                font-size: 1rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border-radius: 5px;
+                border: 0;
+                box-shadow: 3px 3px 5px white, -3px -3px 5px white;
+            }
+            /* article */
+            
+            article {
+                margin: -17.8rem 0 0 0;
+                background: white;
+                padding: 3rem 2.5rem;
+                display: none;
+            }
+            
+            article p {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                position: relative;
+                z-index: 100;
+            }
+            
+            article a {
+                text-decoration: none;
+                color: white;
+                font-size: 1rem;
+                font-family: Verdana, Geneva, sans-serif;
+                margin: 0 1rem;
+            }
+            
+            article a:nth-child(2) {
+                background: #1a9e1a;
+                padding: 0.6rem 2.7rem;
+            }
+            
+            article a:nth-child(3) {
+                background: rgb(10, 10, 10);
+                padding: 0.6rem 2.7rem;
+            }
+            
+            article p span {
+                color: rgb(114, 114, 230);
+            }
+            
+            .open {
+                display: block;
+            }
+            /* mediaquries goes here */
+            
+            @media (max-width: 640px),
+            (max-height :763px) {
+                /* digital-skills-Academy */
+                .digital-skills-Academy h1 {
+                    font-size: 15em;
+                }
+                .digital-skills-Academy p {
+                    font-size: 4em;
+                    line-height: 1;
+                }
+                .digital-skills-Academy {
+                    margin: 5rem 0 0 8rem;
+                }
+                /* parts */
+                .parts p {
+                    font-size: 2rem;
+                    transform: translate(-400px, -30px);
+                }
+                /* aside */
+                aside {
+                    width: 550%;
+                }
+                /* supports */
+                .support {
+                    margin-top: 8rem;
+                    width: 300%;
+                    padding: 0 7rem;
+                }
+                .support h1 {
+                    padding: 3rem 2rem;
+                    margin-left: -3rem;
+                }
+                /* main li */
+                main ul {
+                    margin-left: 1200px;
+                }
+                main li {
+                    width: 600%;
+                }
+                main ul li:nth-child(1),
+                main ul li:nth-child(2) {
+                    transform: translate(-400px);
+                }
+                /* delivered */
+                .delivered p:first-child {
+                    margin-top: 42rem;
+                    width: 260%;
+                    font-size: 3rem;
+                }
+                .delivered p:last-child {
+                    font-size: 2rem;
+                    width: 150%;
+                }
+                /* figure img */
+                figure img {
+                    width: 350%;
+                }
+                /* footer */
+                footer {
+                    width: 250%;
+                }
+                footer p {
+                    font-size: 3.5rem;
+                    margin: 5rem 0;
+                }
+                /* ol li */
+                ol li {
+                    width: 320%;
+                }
+                ol li a {
+                    font-size: 4.2rem;
+                }
+                /* last-website-form */
+                .last-website-form {
+                    flex-direction: column;
+                    width: 350%;
+                    height: 800vh;
+                }
+                .last-website-form form p:first-child {
+                    font-size: 5.2rem;
+                }
+                .last-website-form form input:not(#submit),
+                .last-website-form form select {
+                    width: 90%;
+                    padding: 3rem;
+                    margin: 2rem 0;
+                }
+                .last-website-form form input::placeholder {
+                    font-size: 2rem;
+                }
+                .last-website-form form input[type="email"]+p {
+                    font-size: 3rem;
+                }
+                .last-website-form form select:optional {
+                    font-size: 2rem;
+                }
+                .last-website-form form #submit {
+                    margin: 15rem 0 0 10rem;
+                    padding: 3rem 10rem;
+                    font-size: 3rem;
+                    box-shadow: 10px 10px 5px whitesmoke, -10px -10px 5px whitesmoke;
+                }
+                /* technology-skills */
+                .technology-skills {
+                    transform: translate(-450px, -300px);
+                }
+                .technology-skills p {
+                    font-size: 3.5rem;
+                    width: 200%;
+                }
+                /* ion-icon-sites */
+                .ion-icon-sites {
+                    transform: translate(20px, -500px);
+                }
+                .ion-icon-sites div:last-child a {
+                    font-size: 4rem;
+                }
+                .ion-icon-sites div:last-child p {
+                    font-size: 3rem;
+                }
+                .ion-icon-sites div:first-child {
+                    width: 30%;
+                    margin-left: 20rem
+                }
+                /* cookies-settings */
+                #cookies-settings {
+                    font-size: 3rem;
+                    width: 150%;
+                    padding: 3rem 0;
+                    transform: translate(0, 1px);
+                }
+            }
+            
+            @media (min-width:641px) and (orientation: portrait) {
+                /* digital-skills-Academy */
+                .digital-skills-Academy h1 {
+                    font-size: 15rem;
+                }
+                .digital-skills-Academy p {
+                    font-size: 3.5rem;
+                    line-height: 1
+                }
+                .digital-skills-Academy {
+                    margin-top: 2rem;
+                }
+                /* main li */
+                main ul li:last-child {
+                    width: 500%;
+                    transform: translate(30px);
+                }
+                main ul {
+                    transform: translate(-550px);
+                }
+                main li {
+                    font-size: 2.5rem;
+                    width: 500%;
+                }
+                /* aside */
+                aside {
+                    width: 500%;
+                    height: 17vh;
+                }
+                aside ul li a {
+                    font-size: 2rem;
+                }
+                /* search */
+                .search {
+                    transform: translate(-1340px, 70px);
+                }
+                .search input {
+                    padding: 1.2rem;
+                    width: 700%;
+                }
+                .search input::placeholder {
+                    font-size: 1.7rem;
+                }
+            }

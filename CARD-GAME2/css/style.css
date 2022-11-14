@@ -1,0 +1,133 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.background {
+    background: radial-gradient(circle, rgb(197, 192, 192), rgba(0, 89, 255, 0.575) 100%);
+    position: fixed;
+    top: 9.2%;
+    height: 100vh;
+    width: 105vw;
+    margin-left: -1rem;
+    z-index: 100;
+}
+
+nav {
+    /*nav bar*/
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(81, 137, 240, 0.698);
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin-left: -1rem;
+    box-Shadow: 7px 7px 15px #4444, -7px -7px 15px #4444;
+}
+
+
+/* nav bar p */
+
+nav p {
+    font-size: 2.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(245, 245, 245, 0.486);
+}
+
+
+/* time */
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3.2rem;
+}
+
+main .time {
+    display: flex;
+    height: 11vh;
+    width: 11vw;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.time i:first-child {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.time h1 {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.time i {
+    color: firebrick;
+}
+
+.time i:nth-child(6),
+.time i:nth-child(7) {
+    color: rgb(168, 124, 11);
+}
+
+
+/* icons */
+
+.icons {
+    display: flex;
+    height: 12vh;
+    width: 12vw;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 17rem;
+}
+
+.icons p {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+}
+
+.icons i {
+    background-color: firebrick;
+    padding: 0.4rem;
+    color: white;
+    border-radius: 50%;
+    margin-top: -1rem;
+}
+
+
+/* figure */
+
+
+/* background: rgba(65, 105, 225, 0.609);

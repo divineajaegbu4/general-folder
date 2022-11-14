@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 6rem;
+  background-color: #8a2b06;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+.foodLink {
+  text-decoration: none;
+  color: white;
+}
+.main-image {
+  max-width: 100%;
+  height: 40rem;
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+  overflow: hidden;
+  transform: scale(1, 1) translateY(-35px);
+}
+
+.main-image img {
+  width: 100%;
+  margin: auto;
+}
+
+.sidebarCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 627px) {
+  .foodLink {
+    display: none;
+  }
+}

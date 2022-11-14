@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+</head>
+<style>
+    .grid-container .menu {
+        display: none;
+    }
+    
+    .grid-container ul {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10px, 200px));
+        list-style: none;
+    }
+    
+    .grid-container ol {
+        list-style-type: none;
+        background-color: red;
+        width: 130.3%;
+        padding-left: 1rem;
+        display: none;
+        /* margin-left: 0 */
+    }
+    
+    .grid-container .employer ol {
+        width: 170%;
+    }
+    
+    .grid-container ol li {
+        width: 500%;
+    }
+    
+    .grid-container ol a {
+        line-height: 1.5;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        font-weight: bolder;
+    }
+    
+    .grid-container ul li a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        /* background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%); */
+    }
+    
+    .courses1::after {
+        content: "";
+        border: 1px solid red;
+        margin-left: 2rem;
+        padding: 1rem 0;
+    }
+    
+    .grid-container ul .news {
+        margin-left: 1rem
+    }
+    
+    .grid-container ul .employer {
+        margin-left: 1rem
+    }
+    
+    .grid-container ul .apprenticeships,
+    .grid-container ul .contact {
+        margin-left: -2rem;
+    }
+    
+    section {
+        margin-top: 8rem
+    }
+    
+    .grid-container ul li a:not(ol li a):hover {
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+    }
+    
+    li:hover ol {
+        display: block;
+    }
+    
+    .input {
+        margin-left: 3rem;
+    }
+    
+    @media(max-width: 707px) {
+        .grid-container ul {
+            grid-template-columns: repeat(5, minmax(10px, 200px));
+        }
+    }
+    /* copy */
+    /* section part2 */
+    
+    .menu-container #menu {
+        text-decoration: none;
+        display: none;
+    }
+    
+    .menu-container {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .menu-items {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: -5rem;
+        padding: 0.5rem;
+    }
+    
+    .menu-items-container {
+        background-color: rgb(18, 35, 61);
+        height: 80px;
+    }
+    
+    .menu-items ul {
+        list-style: none;
+    }
+    
+    .menu-items ul li a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: 700;
+    }
+    /* left border of links */
+    
+    .menu-items ul li:not(.contact-list, .icon, .input, .background, .hover):after {
+        content: "";
+        /* position: fixed; */
+        border: 1px solid white;
+        padding: 1rem 0;
+        margin-left: 2.7rem;
+    }
+    
+    .menu-items .hover {
+        display: flex;
+        flex-direction: column;
+        width: 300%;
+    }
+    
+    .menu-items .background {
+        background-color: white;
+        padding: 0 5rem 0 1rem;
+        opacity: 0;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.801);
+    }
+    
+    .menu-items .hover a {
+        color: white;
+        text-shadow: 4px 4px 7px black;
+    }
+    
+    .menu-items .courses-link:hover .background,
+    .menu-items .employers-link:hover .background {
+        opacity: 1;
+        transition: all 2s ease-in-out;
+    }
+    /* centering space list link very well with margins */
+    
+    .menu-items .apprenticeships-link {
+        margin-left: -9rem;
+    }
+    
+    .menu-items .news {
+        margin-left: -5rem;
+    }
+    
+    .menu-items .employers,
+    .menu-items .contact {
+        margin-left: 0.3rem;
+    }
+    /* end of centering space list links */
+    /* hovering the links */
+    
+    .menu-items ul li a:not(.hover a, .form):hover {
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        padding: 1rem;
+        border-radius: 30px;
+    }
+    
+    .menu-items .employers a {
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+        padding: 1rem;
+        border-radius: 30px;
+    }
+    
+    .menu-items .form {
+        display: flex;
+        margin-left: 3rem;
+    }
+    
+    .menu-items .form .input input {
+        padding: 0.4rem 3rem 0.4rem 0.4rem;
+    }
+    
+    .menu-items .form .input input::placeholder {
+        font-size: 1.1rem;
+    }
+    
+    .menu-items .form .icon ion-icon {
+        color: rgba(0, 0, 255, 0.719);
+        font-size: 1.5rem;
+        transform: translate(220px, 3px);
+    }
+</style>
+
+<body>
+    <section>
+        <div class="grid-container">
+            <a href="#" class="menu">menu</a>
+            <ul>
+                <!-- list-one -->
+                <li>
+                    <a href="#" class="courses"><span class="courses1">COURSES<span class="emoji">▾</span></span>
+                        <ol>
+                            <li><a href="#">Courses for beginners</a></li>
+                <li><a href="#">IT Career Starters</a></li>
+                <li><a href="#">IT Professionals</a></li>
+                </ol>
+                </a>
+                </li>
+
+                <!-- list two -->
+                <li class="apprenticeships"><a href="#" class="courses1">APPRENTICESHIPS</a></li>
+                <!-- list-three -->
+                <li class="employer">
+                    <a href="#"><span class="courses1"> EMPLOYERS<span class="emoji">▾</span></span>
+                        <ol>
+                            <li><a href="#">SOFTWARE DEVELOPER</a></li>
+                <li><a href="#">APPRENTICESHIPS</a></li>
+                <li><a href="#">EMPLOYER NEWS</a></li>
+                </ol>
+                </a>
+                </li>
+
+                <!-- list-four -->
+                <li class="news courses1"><a href="#">NEWS</a></li>
+                <!-- list-five -->
+                <li class="contact"><a href="#">CONTACT US</a></li>
+                <!-- list-six -->
+                <li class="input">
+                    <input type="text" placeholder="Search...">
+                </li>
+
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

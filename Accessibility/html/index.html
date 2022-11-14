@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    label input:focus {
+        color: red;
+    }
+</style>
+
+<body>
+    <div aria-label="interactive div">Hello</div>
+
+    <label>
+        FirstName:
+        <input type="text">
+    </label><br/>
+    <label>
+        SecondName:
+        <input type="text">
+    </label>
+
+    <!-- this will let screen reader know the element can be clicked -->
+    <button aria-label="this is for screen readers" tabindex="0" role="button" onclick="prompt('Hello world')" onkeyup="alert('Hello')">Click me</button>
+
+    <!-- it helps the screen readers to know  the name and kind of images -->
+    <img src="..." alt="dot dot dot">
+
+    <a href="#" aria-label="empty link">clickUp</a>
+
+    <!-- aria-labelledby -->
+    <div class="container">empty link</div>
+
+    <a href="#" aria-labelledby="container"></a>
+</body>
+
+</html>

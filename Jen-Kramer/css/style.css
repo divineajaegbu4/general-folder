@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?Oxygen+Mono&family');
+:root {
+    --black: #171321;
+    --color1: #0d314b;
+    --color2: #4b0d49;
+    --color3: #ff17e4;
+    --color4: #e310cb;
+    --color5: #86fbfb;
+    --color6: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: "Oxygen", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* line-height: 1.6; */
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--black);
+    color: var(--color6);
+    font-size: var(--font-size);
+}
+
+a {
+    color: var(--color4);
+}
+
+a:hover {
+    color: var(--color3);
+    text-decoration: none
+}
+
+.content {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.content .name {
+    font-family: var(--mono);
+}
+
+.name span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+    color: var(--color5);
+    display: block;
+}
+
+.content h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}

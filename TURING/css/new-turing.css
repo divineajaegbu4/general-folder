@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,300;0,600;0,700;1,100;1,500;1,700&family=Lato:ital,wght@0,300;1,300&family=Open+Sans+Condensed:wght@700&family=Roboto:ital,wght@0,100;1,400&family=Shizuru&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,300;0,600;0,700;1,100;1,500;1,700&family=Lato:ital,wght@0,300;1,300&family=Open+Sans+Condensed:wght@700&family=Outfit:wght@200&family=Roboto:ital,wght@0,100;1,400&family=Shizuru&family=Source+Sans+Pro&display=swap');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+    min-width: 100%;
+    min-width: 100%;
+}
+
+
+/* header */
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(3fr, 1fr));
+}
+
+header .header-logos li {
+    list-style: none;
+}
+
+header .header-logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-links {
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.2rem;
+    line-height: 0.9;
+    font-weight: bolder;
+}
+
+.logo-links span {
+    font-size: 8rem;
+}
+
+.logo-links span::before {
+    content: "";
+    border: 2px solid transparent;
+    border-image: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+    border-image-slice: 1;
+    position: relative;
+    left: 94%;
+}
+
+.parts {
+    font-size: 1.4rem;
+    letter-spacing: 7px;
+    padding: 1rem;
+}
+
+.list a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list {
+    padding: 0 3rem;
+    line-height: 1.3;
+}
+
+.position {
+    margin-left: 14rem;
+}
+
+
+/* navbar */
+
+
+/* general total styles */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3fr, 1fr));
+}
+
+nav {
+    background-color: rgba(11, 22, 39, 0.863);
+    margin: 0;
+    padding: 0.8rem;
+    height: 85px;
+    position: sticky;
+    top: 0;
+}
+
+nav .menu li {
+    list-style: none;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem 1rem;
+}
+
+nav .menu li a:hover,
+nav .menu li a:active {
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+    background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+}
+
+nav .menu li:not(.contact,
+.inputs,
+.hover):before {
+    content: "";
+    border: 1px solid white;
+    padding: 0.7rem 0;
+    position: relative;
+    left: 98%;
+}
+
+nav .menu .inputs input {
+    border: 0;
+    border-radius: 3px;
+    position: absolute;
+    right: 2%;
+    bottom: 30%;
+    padding: 0.7rem 0;
+    padding-left: 0.2rem;
+    width: 150px;
+}
+
+nav .menu .inputs input::placeholder {
+    font-size: 1rem;
+}
+
+nav .menu ion-icon {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 255, 0.712);
+    position: absolute;
+    right: 1%;
+    margin-top: -30px;
+    width: 5vw;
+    z-index: 100;
+}
+
+nav .menu .employers:hover .hover {
+    display: block;
+}
+
+nav .container {
+    display: none;
+}
+
+.employers .hover {
+    display: none;
+    background: white;
+    box-shadow: 2px 2px 4px black;
+    padding: 0.5rem;
+    width: 170%;
+    position: relative;
+    z-index: 100;
+    margin-top: 0.4rem;
+}
+
+nav .items .hover li a {
+    line-height: 1.7;
+    font-size: 1.2rem;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav .items {
+    display: grid;
+    grid-template-columns: 160px 230px 180px 105px 170px 200px;
+}
+
+
+/* section3 */
+
+.training-solution-container {
+    background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+    /* padding: 5rem 0; */
+}
+
+.training-solution-container h1 {
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 4.8rem;
+    color: white;
+    line-height: 1;
+    width: 95vw;
+}
+
+
+/* delivered */
+
+.delivered p {
+    padding: 1.5rem;
+    font-family: "Josefin Slab", sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    opacity: 0.8;
+}
+
+
+/* image */
+
+.image p {
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* figure */
+
+figure p {
+    font-size: 1.3rem;
+    width: 93vw;
+}
+
+figure p:nth-child(3n),
+figure p:last-child {
+    font-weight: bolder;
+}
+
+
+/* links */
+
+ol {
+    list-style-type: none;
+}
+
+ol li a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    line-height: 2;
+    color: purple;
+}
+
+ol li a:hover {
+    color: rgba(0, 0, 139, 0.808);
+}
+
+
+/* footer */
+
+.footer {
+    background-color: rgba(11, 22, 39, 0.863);
+}
+
+.footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 300px));
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+.digital-skill p {
+    text-align: center;
+    font-size: 1.4rem;
+    width: 150%;
+    line-height: 1.3;
+}
+
+.footer-container .digital-skill p span {
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+}
+
+.whitespace {
+    text-align: center;
+    font-size: 1.3rem;
+    width: 150%;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    right: 20%;
+}
+
+.digital-skill {
+    position: relative;
+    right: 20%;
+}
+
+.icons {
+    position: relative;
+    right: 17%;
+}
+
+.icons .directions a {
+    color: rgba(2, 5, 8, 0.842);
+    font-size: 1.4rem;
+    margin-left: 1.5rem;
+    background: white;
+    text-align: center;
+    padding: 0.6rem 0.7rem 0 0.7rem;
+    border-radius: 50%;
+}
+
+.icons .main-links {
+    display: flex;
+    padding-top: 2rem;
+    width: 130%;
+    justify-content: space-between;
+}
+
+.icons .main-links a {
+    /* padding: 0 1rem; */
+    position: relative;
+    right: 15%;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.icons .directions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-container .form label {
+    font-size: 2.3rem;
+}
+
+.footer-container .form input,
+select {
+    padding: 1rem 0 1rem 0.7rem;
+    border: 0;
+}
+
+.footer-container .form input {
+    margin-bottom: 0.3rem;
+}
+
+.footer-container .form input::placeholder,
+.footer-container select:optional {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer-container .form .link-input a {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-container .form .link-input {
+    background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+    width: 40%;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0.3rem 0;
+    border-radius: 30px;
+}
+
+.footer-container .form .link-input:hover,
+.footer-container .form .link-input:active {
+    box-shadow: 5px 5px 7px white;
+    transform: scale(1.2, 1.2);
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------ */
+
+
+/* GENERAL NAMES GOES HERE. */
+
+
+/* ------------------------------------ */
+
+.width {
+    width: 150%;
+}
+
+.padding {
+    padding-top: 6rem;
+}
+
+.text-decoration {
+    text-decoration: none;
+}
+
+.white {
+    color: white;
+}
+
+.outfit {
+    font-family: "Outfit", sans-serif;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.shift {
+    padding: 0 1.5rem;
+}
+
+nav .menu li .bg:hover,
+nav .menu li .bg:active {
+    border-radius: 0;
+    transition: border-radius 0.2s ease-in-out;
+}
+
+nav .menu li .bg {
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+    background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+}
+
+.clone {
+    margin: 2rem 0;
+}
+
+.same {
+    text-decoration: none;
+    background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relearning</title>
+</head>
+<style>
+    .div>p {
+        background-color: coral;
+        width: 300px;
+        padding: 10px 0 10px 0;
+        text-align: center;
+        border-radius: 5px;
+        color: rgba(255, 251, 251, 0.63);
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: fixed;
+        z-index: -1;
+    }
+    
+    .div {
+        display: grid;
+        grid-template-columns: repeat(2, 320px);
+        height: 100vh;
+        align-content: center;
+        justify-content: center;
+        grid-template-areas: "filter filter filter";
+        float: right;
+    }
+    
+    .div p:nth-last-child(2n) {
+        background-color: teal;
+        grid-column: 2 / 5;
+    }
+    
+    .adjacent-siblings h1+p {
+        padding: 20px;
+        width: calc(150% - 20px);
+        opacity: 0.8;
+    }
+    
+    .links a {
+        text-decoration: none;
+        font-size: 15px;
+        margin: 10px;
+        color: rgb(202, 59, 59);
+    }
+    
+    .links a::before {
+        content: "(Click)";
+        color: blue;
+    }
+    
+    .links a:hover,
+    .link a:active {
+        color: pink;
+        cursor: pointer;
+    }
+    
+    .adjacent-siblings {
+        clear: both;
+    }
+    
+    .div p:last-child {
+        position: fixed;
+        top: 0;
+        z-index: -100;
+    }
+    
+    .div h1+p {
+        color: red;
+    }
+    
+    .div p:nth-child(2n+3) {
+        top: 100px;
+        z-index: -1;
+    }
+    
+    .div p:hover,
+    .div p:active {
+        background: rgb(36, 146, 36);
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="div" id="link">
+        <h1>clone your websites</h1>
+        <p>chike is heading towards ibafo</p>
+        <p>shedrack is a techlead in their company</p>
+        <p>laughing jackers</p>
+        <p>chike is heading towards ibafo</p>
+        <p>shedrack is a techlead in their company</p>
+        <p>laughing jackers</p>
+    </div>
+
+    <div class="adjacent-siblings">
+        <h1>chike will travel tommorrow</h1>
+        <p>happiness is selling pap</p>
+        <h1>ifeoma is a good woman and christian</h1>
+        <h2>color woman</h2>
+        <p>divine is learning programming</p>
+    </div>
+
+    <div class="links">
+        <a href="#link">packages</a>
+
+        <a href="#">Clones</a>
+
+        <a href="#">Documents</a>
+
+        <a href="#">Science</a>
+
+        <a href="#">drone</a>
+
+    </div>
+</body>
+
+</html>
+
+</html>

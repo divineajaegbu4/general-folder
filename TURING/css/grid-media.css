@@ -1,0 +1,232 @@
+@media (max-width:1064px) {
+    section {
+        background-color: rgba(18, 35, 61, 0.87);
+    }
+    section .section-container ul a {
+        font-size: 1rem;
+    }
+    section .section-container ul:not(.hover) {
+        grid-template-columns: 110px 160px 140px 60px 110px 300px;
+    }
+    section .section-container .input input {
+        padding: 0.5rem;
+        padding-right: 2rem;
+    }
+    section .section-container .input ion-icon {
+        transform: translate(200px, 9px);
+        color: rgba(0, 0, 255, 0.692);
+    }
+    .section-container ul li:not(.hover li, .input, .contact)::before {
+        position: relative;
+        left: 110%;
+    }
+    section .section-container .hover {
+        width: 190%;
+    }
+    /* footer */
+    footer .footer-container {
+        grid-template-columns: repeat(auto-fit, minmax(10px, 200px));
+        grid-gap: 140px;
+    }
+    .footer-container .icons .main-links {
+        width: 200px;
+    }
+    .footer-container .icons .main-links a {
+        margin-left: 2rem
+    }
+    .footer-container .icons .directions a ion-icon {
+        font-size: 1.3rem;
+        padding: 0.4rem;
+    }
+    .footer-container .icons .directions {
+        width: 300px;
+    }
+    .footer-container .whitespace {
+        width: 150%;
+        /* margin-left: 2rem; */
+        margin: -1rem 0 0 2rem;
+    }
+    /* digital-skill */
+    .footer-container .digital-skill p {
+        font-size: 1.2rem;
+    }
+    .footer-container .digital-skill {
+        margin: 6rem 0 0 1.7rem;
+    }
+    /* form */
+    .footer-container .form label {
+        width: 200%;
+    }
+    footer .footer-container .form input,
+    footer .footer-container .form select {
+        width: 170%;
+    }
+    footer .footer-container .form .reason {
+        width: 180%;
+    }
+}
+
+@media (max-width: 1018px) {
+    section .section-container .input input {
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+    footer .footer-container {
+        grid-gap: 120px;
+    }
+}
+
+@media (max-width: 998px) {
+    section {
+        background-color: rgba(18, 35, 61, 0.87);
+    }
+    section .section-container ul:not(.hover) {
+        margin-left: -2rem;
+    }
+    footer .footer-container {
+        grid-template-columns: repeat(1, minmax(10px, 150px));
+        grid-gap: 0;
+        padding-bottom: 8rem;
+        width: 65%;
+        justify-content: center;
+    }
+    footer {
+        background-color: rgba(18, 35, 61, 0.863);
+    }
+    .footer-container .form label {
+        text-align: center;
+        font-weight: bold;
+        margin-left: 6rem;
+    }
+    footer .footer-container .form input,
+    footer .footer-container .form select,
+    footer .footer-container .form .reason {
+        width: 350%;
+    }
+    /* digital-skill */
+    .footer-container .digital-skill p {
+        font-size: 1.7rem;
+        text-align: center;
+        width: 500%;
+    }
+    .footer-container .digital-skill {
+        margin-top: -2rem;
+    }
+    .footer-container .form a {
+        margin-left: 10.5rem;
+    }
+    .footer-container .icons .main-links a {
+        margin-left: 0.5rem;
+    }
+    .footer-container .icons .main-links {
+        width: 300%;
+    }
+    footer .footer-container .whitespace {
+        width: 300%;
+    }
+}
+
+@media (max-width: 890px) {
+    section {
+        background-color: rgba(18, 35, 61, 0.87);
+        height: 120px;
+    }
+    section .section-container ul:not(.hover) {
+        grid-template-columns: 100px 150px 120px 65px 140px;
+        grid-gap: 40px;
+    }
+    section .section-container .input {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 3%;
+    }
+    section .section-container .hover {
+        position: fixed;
+        width: 200px;
+    }
+    section .section-container .input input {
+        width: 90vw;
+    }
+    section .section-container .input ion-icon {
+        transform: translateY(35px);
+        width: 175vw;
+    }
+    .section-container ul li:not(.hover li, .input, .contact)::before {
+        left: 120%;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        background-color: rgba(18, 35, 61, 0.87);
+        /* height: 480px; */
+    }
+    .container .list-links .question {
+        width: 300%;
+    }
+    .container .list-links li {
+        font-size: 1.2rem;
+    }
+    section .section-container .hover {
+        position: relative;
+        margin: 12.3px 0 0 -16.9rem;
+        width: 94.5vw;
+        box-shadow: 0 0 0 black;
+        line-height: 2;
+        z-index: -1;
+    }
+    section .section-container ul .courses-employers .hover {
+        width: 95.1vw;
+    }
+    section .section-container ul:not(.hover) {
+        grid-template-columns: repeat(1, 150px);
+        justify-content: center;
+        align-items: center;
+    }
+    section .section-container ul .courses,
+    section .section-container ul .employers {
+        padding: 1rem 18rem;
+        margin-left: -17rem;
+        border-radius: 0;
+        background: linear-gradient( 90deg, rgba(143, 191, 33, 1) 0%, rgba(19, 154, 100, 1) 49%, rgba(48, 101, 175, 1) 100%);
+    }
+    section .section-container ul,
+    section .section-container li {
+        display: none;
+    }
+    section .section-container .input {
+        display: block;
+        width: 100vw;
+        margin-top: -40px;
+    }
+    /* javascript active */
+    section section .section-container ul .courses {
+        padding: 1rem 18.5rem;
+    }
+    .section-container ul li:not(.hover li, .input, .contact)::before {
+        padding: rem 0;
+        position: relative;
+        /* opacity: 0; */
+    }
+    section .section-container .input ion-icon {
+        transform: translateY(36px);
+        width: 175vw;
+    }
+    section .section-container .menu {
+        display: block;
+        text-align: center;
+        color: white;
+        transform: translateY(-30px);
+        font-size: 1.3rem;
+        color: white;
+        margin-left: -4rem;
+    }
+    section .section-container .menu::before {
+        content: "☰";
+        position: fixed;
+        left: 55%;
+    }
+    footer {
+        margin-left: -7rem;
+    }
+}

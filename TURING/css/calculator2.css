@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(crimson, crimson);
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+section {
+    width: 230px;
+    height: 500px;
+    background-color: black;
+    margin: 8rem auto;
+    border-radius: 20px;
+    padding: 0 1rem;
+    border: 15px solid black;
+    outline: 15px solid black;
+    box-shadow: 7px 7px 8px white, -7px -7px 8px white;
+    /* outline-offset: 1px; */
+}
+
+.shift {
+    padding: 0.5rem 0;
+}
+
+.top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.white {
+    color: white;
+}
+
+.button-container {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: space-between;
+    grid-gap: 10px;
+    text-align: center;
+    margin: -40px 0 0 -10px;
+}
+
+.button-container div {
+    background: #2c2b2b;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.button-container .gray {
+    background-color: gray;
+}
+
+.button-container .orange {
+    background-color: rgb(226, 131, 14);
+}
+
+.button-container .num-0 {
+    border-radius: 30px;
+    width: 100px;
+    grid-column: 1/3;
+}
+
+.display {
+    font-size: 3rem;
+    text-align: right;
+    padding: 3rem 0;
+}
+
+.horizontal-scroll {
+    width: 220px;
+    height: 1.4px;
+    position: absolute;
+    top: 77%;
+    left: 42.5%;
+    border-radius: 60px;
+    background-image: linear-gradient(white, white);
+}

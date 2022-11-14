@@ -1,0 +1,36 @@
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(118, 117, 117, 0.727);
+  margin-top: 50px;
+  padding: 1.5rem 0;
+}
+@media screen and (max-width: 414px) {
+  .footer__container {
+    flex-direction: column;
+  }
+}
+
+.meals-guide {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.meals-guide li {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.meals-guide li a {
+  text-decoration: none;
+}
+.footer-header,
+.meals-guide li a,
+.meals-guide li {
+  color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.meals-guide li:hover,
+.meals-guide li a:hover {
+  color: rgba(245, 245, 245, 0.52);
+}

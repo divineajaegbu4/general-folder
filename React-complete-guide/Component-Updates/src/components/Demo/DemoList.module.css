@@ -1,0 +1,11 @@
+ul li {
+  margin-right: 3rem;
+  list-style: none;
+  box-shadow: 2px 2px 4px #44444468;
+  background-color: white;
+  padding: 0.5rem 0;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 15px;
+  font-weight: bold;
+}

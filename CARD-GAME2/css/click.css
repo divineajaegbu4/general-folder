@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+section .container {
+    display: flex;
+    height: 200vh;
+    align-items: center;
+}
+
+.accordion-item .accordion-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.accordion-item {
+    background-color: crimson;
+    margin-bottom: 2px;
+}
+
+.accordion-item .accordion-content p {
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 5px 5px 7px black;
+    font-weight: bolder;
+    margin-left: 2rem;
+}
+
+.accordion-item .accordion-content {
+    background-color: rgba(105, 105, 105, 0.342);
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 30s ease-in-out;
+    -webkit-transition: max-height 30s ease-in-out;
+    -moz-transition: max-height 30s ease-in-out;
+    -ms-transition: max-height 30s ease-in-out;
+    -o-transition: max-height 30s ease-in-out;
+}
+
+.accordion-item .accordion-content::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 180px;
+    background-color: tomato;
+    left: 0;
+}
+
+.accordion-item .accordion-link .remove {
+    display: none;
+}
+
+.accordion-item:target .accordion-content {
+    max-height: 100%;
+}
+
+.accordion-item:target .accordion-link .remove {
+    display: block;
+}
+
+.accordion-item:target .accordion-link .add {
+    display: none;
+}

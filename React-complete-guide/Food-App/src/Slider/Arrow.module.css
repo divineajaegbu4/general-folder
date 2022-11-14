@@ -1,0 +1,17 @@
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 35%;
+  z-index: 100;
+  cursor: pointer;
+  user-select: none;
+  font-size: 5rem;
+  overflow-x: hidden;
+}
+
+/* .clickIcon {
+  position: relative;
+  right: 4%;
+} */
