@@ -55,6 +55,8 @@ const BasicForm = () => {
     console.log("Submitted!!");
     console.log(firstNameValue, ",", lastNameValue, ",", emailNameValue);
 
+  
+    
     resetFirstName();
     resetLastName();
     resetEmailName();

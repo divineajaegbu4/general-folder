@@ -22,10 +22,10 @@ function makeAdder(x) {
     return add;
 }
 
-var plusOne = makeAdder(1);
-var plusTen = makeAdder(10);
-var plusTwelve = makeAdder(12);
-var plusFive = makeAdder(5);
+let plusOne = makeAdder(1);
+let plusTen = makeAdder(10);
+let plusTwelve = makeAdder(12);
+let plusFive = makeAdder(5);
 
 console.log(plusOne(3))
 console.log(plusOne(41))
@@ -109,7 +109,7 @@ console.log(sizeDown)
 console.log("-----------------------------Lexical scopes")
 
 function express(a) {
-    var b = a * 2;
+    let b = a * 2;
 
     function solve(c) {
         console.log(a, b, c)
@@ -137,7 +137,7 @@ function flow(str, a) {
 
 }
 
-var b = 2
+let b = 2
 
 const views = flow("b = 3", 2)
 

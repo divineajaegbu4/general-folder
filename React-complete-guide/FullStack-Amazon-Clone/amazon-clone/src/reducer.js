@@ -1,4 +1,7 @@
-export const initialState = { basket: [] };
+export const initialState = {
+   basket: [],
+   user:null
+  };
 
 //Selector
 export const getBasketTotal = (basket) =>

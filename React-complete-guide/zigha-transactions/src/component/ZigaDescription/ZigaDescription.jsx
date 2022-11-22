@@ -3,7 +3,7 @@ import React from "react";
 import SignupIcon from "../MultiStep-Form/SignUp-Form/SignupIcon";
 import classes from "./ZigaDescription.module.css";
 
-function ZigaDescription() {
+function ZigDescription() {
   return (
     <section className={classes.container}>
       <div className={classes.containerZigaDescription}>
@@ -21,4 +21,4 @@ function ZigaDescription() {
   );
 }
 
-export default ZigaDescription;
+export default ZigDescription;

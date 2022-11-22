@@ -68,12 +68,14 @@ const SimpleInput = () => {
         <label htmlFor="name">Your E-Mail</label>
         <input
           type="email"
+          placeholder="input"
           onChange={emailChangedHandler}
           onBlur={emailBlurHandler}
           value={enteredEmail}
         />
         {emailInputHasError && <p className="error-text">Email is invalid.</p>}
       </div>
+      <input type="submit"/>
       <div className="form-actions">
         <button disabled={!formIsValid}>Submit</button>
       </div>

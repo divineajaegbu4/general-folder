@@ -1,29 +1,84 @@
 import React, { useState } from "react";
-import validator from "validator";
 
 import classes from "./GeneralStyleForm.module.css";
-import ZigaDescription from "../../ZigaDescription/ZigaDescription";
+import useInput from "../../../hooks/use-input";
+import ZigDescription from "../../ZigaDescription/ZigaDescription";
 
-function BusinessDetails({ nextStep, handleFormData, values }) {
-  const [error, setError] = useState(false);
+const isNotEmpty = (value) => value.trim() !== "";
+const isEmail = (value) => value.trim().includes("@");
+const isNumber = (value) => value.trim().length === 5;
 
-  // after form submit validating the form data using validator
-  const submitFormData = (e) => {
-    e.preventDefault();
 
-    // checking if value of first name and last name is empty show error else take to next step
-    if (validator.isEmpty(values.email) || validator.isEmpty(values.email)) {
-      setError(true);
-    } else {
-      nextStep();
-    }
+function BusinessDetails({ nextStep }) {
+  const {
+    value: firstNameValue,
+    isValid: firstNameIsValid,
+    hasError: firstNameHasError,
+    valueChangeHandler: firstNameChangeHandler,
+    inputBlurHandler: firstNameBlurHandler,
+    reset: resetFirstName,
+  } = useInput(isNotEmpty);
+
+
+  const {
+    value: emailNameValue,
+    hasError: emailNameHasError,
+    isValid: emailNameIsValid,
+    valueChangeHandler: emailNameChangeHandler,
+    inputBlurHandler: emailNameBlurHandler,
+    reset: resetEmailName,
+  } = useInput(isEmail);
+
+  const {
+    value: numberNameValue,
+    hasError: numberNameHasError,
+    isValid: numberNameIsValid,
+    valueChangeHandler: numberNameChangeHandler,
+    inputBlurHandler: numberBlurHandler,
+    reset: resetNumberName,
+  } = useInput(isNumber);
+
+  let formIsValid = false;
+
+  if (
+    firstNameIsValid &&
+    emailNameIsValid &&
+    numberNameIsValid
+  ) {
+    formIsValid = true;
+  } 
+
+  const firstNameClasses = firstNameHasError
+  ? `${classes.formControl} ${classes.invalid}`
+  : "form-control";
+
+
+
+const emailNameClasses = emailNameHasError
+  ? `${classes.formControl} ${classes.invalid}`
+  : "form-control";
+
+
+  const numberNameClasses = numberNameHasError
+  ? `${classes.formControl} ${classes.invalid}`
+  : "form-control";
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+
+    resetFirstName();
+    resetEmailName();
+    resetNumberName();
+    nextStep();
   };
+  
   return (
     <section className={classes.containerForm}>
       <div className={classes.form}>
-        <ZigaDescription />
+        <ZigDescription />
       </div>
-      <form onSubmit={submitFormData}>
+      <form onSubmit={submitHandler}>
         <div className={classes.createPIN}>
           <h2>Business Details</h2>
 
@@ -32,52 +87,61 @@ function BusinessDetails({ nextStep, handleFormData, values }) {
           </p>
 
           <div className={classes.createPasswordInput}>
-            <div className={`${classes.createNewPassword} ${classes.spacing}`}>
+            <div className={`${classes.createNewPassword} ${classes.spacing} ${firstNameClasses} `}>
               <p className={classes.inputTitle}>Business Name</p>
               <input
                 className={`${classes.input} ${classes.inputWidth}`}
                 type="text"
                 title="enter your business name"
-                defaultValue={values.firstName}
-                onChange={handleFormData("firstName")}
+                value={firstNameValue}
+                onChange={firstNameChangeHandler}
+                onBlur={firstNameBlurHandler}
               />
-              <div className={classes.error}>
-                {error ? <p>This is a required field</p> : ""}
-              </div>
+              {firstNameHasError && (
+                <p className={classes.errorText}>Please enter a first name.</p>
+              )}
             </div>
+
             <div
-              className={`${classes.createConfirmPassword} ${classes.spacing}`}
+              className={`${classes.createConfirmPassword} ${classes.spacing} ${emailNameClasses} `}
             >
               <p className={classes.inputTitle}>Business Email</p>
               <input
                 className={`${classes.input} ${classes.inputWidth}`}
                 type="email"
                 title="enter your business name"
-                defaultValue={values.email}
-                onChange={handleFormData("firstName")}
+                value={emailNameValue}
+                onChange={emailNameChangeHandler}
+                onBlur={emailNameBlurHandler}
               />
-              <div className={classes.error}>
-                {error ? <p>This is a required field</p> : ""}
-              </div>
+              {emailNameHasError && (
+                <p className={classes.errorText}>
+                  Please enter a valid email address.
+                </p>
+              )}
             </div>
 
             <div
-              className={`${classes.createConfirmPassword} ${classes.spacing}`}
+              className={`${classes.createConfirmPassword} ${classes.spacing}  ${numberNameClasses}`}
             >
               <p className={classes.inputTitle}>CAC Number</p>
               <input
                 className={`${classes.input} ${classes.inputWidth}`}
                 type="number"
                 title="enter your business name"
-                defaultValue={values.number}
-                onChange={handleFormData("number")}
+                value={numberNameValue}
+                onChange={numberNameChangeHandler}
+                onBlur={numberBlurHandler}
               />
-              <div className={classes.error}>
-                {error ? <p>This is a required field</p> : ""}
-              </div>
+
+              {numberNameHasError && (
+                <p className={classes.errorText}>
+                  Please enter a valid number.
+                </p>
+              )}
             </div>
 
-            <button className={classes.createPasswordButton} type="submit">
+            <button className={classes.createPasswordButton} type="submit"  disabled={!formIsValid}>
               Next
             </button>
           </div>

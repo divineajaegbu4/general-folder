@@ -74,9 +74,33 @@ button {
   cursor: pointer;
 }
 
-.error {
-  color: red;
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
 }
+
+button:enabled {
+  cursor: pointer;
+}
+
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.errorText {
+  color: #b40e0e;
+}
+
 
 .haveAccount {
   text-align: center;
@@ -119,4 +143,20 @@ select {
   position: relative;
   top: 6rem;
   left: -4rem;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
 }

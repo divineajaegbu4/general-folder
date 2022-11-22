@@ -1,15 +1,68 @@
-import React, { useState } from "react";
-import validator from "validator";
+import React  from "react";
 import { Link } from "react-router-dom";
 
-import ZigaDescription from "../ZigaDescription/ZigaDescription";
+import ZigDescription from "../ZigaDescription/ZigaDescription";
+import useInput from "../../hooks/use-input";
+import { auth } from "../../hooks/firebase";
 import classes from "./LogIn.module.css";
 
+const isEmail = (value) => value.trim().includes("@");
+const isPassword = (value) => value.trim().length === 8;
+
 function LogIn() {
+  const {
+    value: emailNameValue,
+    hasError: emailNameHasError,
+    isValid: emailNameIsValid,
+    valueChangeHandler: emailNameChangeHandler,
+    inputBlurHandler: emailNameBlurHandler,
+    reset: resetEmailName,
+  } = useInput(isEmail);
+
+  const {
+    value: passwordNameValue,
+    hasError: passwordNameHasError,
+    isValid: passwordNameIsValid,
+    valueChangeHandler: passwordNameChangeHandler,
+    inputBlurHandler: passwordBlurHandler,
+    reset: resetPasswordName,
+  } = useInput(isPassword);
+
+  let formIsValid = false;
+
+  if (
+    passwordNameIsValid &&
+    emailNameIsValid &&
+  ) {
+    formIsValid = true;
+  }
+
+  const emailNameClasses = emailNameHasError
+    ? `${classes.formControl} ${classes.invalid}`
+    : "form-control";
+
+  const passwordNameClasses = passwordNameHasError
+    ? `${classes.formControl} ${classes.invalid}`
+    : "form-control";
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(emailNameValue, passwordNameValue)
+      .then((auth) => {
+        if (auth) {
+          resetPasswordName();
+          resetEmailName();
+          nextStep();
+        }
+      }) .catch((error) => alert("Authentication failed!"));
+    
+  };
   return (
     <section className={classes.containerForm}>
       <div className={classes.form}>
-        <ZigaDescription />
+        <ZigDescription />
       </div>
       <form>
         <div className={classes.LoginToAccount}>

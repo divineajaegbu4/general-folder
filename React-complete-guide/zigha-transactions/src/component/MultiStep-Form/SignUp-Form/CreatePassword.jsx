@@ -1,29 +1,57 @@
-import React, { useState } from "react";
-import validator from "validator";
+import React from "react";
 
 import classes from "./GeneralStyleForm.module.css";
-import ZigaDescription from "../../ZigaDescription/ZigaDescription";
+import ZigDescription from "../../ZigaDescription/ZigaDescription";
+import useInput from "../../../hooks/use-input";
 
-function CreatePassword({ nextStep, handleFormData, values }) {
-  const [error, setError] = useState(false);
+const isPassword = (value) => value.trim().length === 8;
 
-  // after form submit validating the form data using validator
-  const submitFormData = (e) => {
-    e.preventDefault();
+function CreatePassword({ nextStep }) {
+  const {
+    value: passwordNameValue,
+    isValid: passwordNameIsValid,
+    hasError: passwordNameHasError,
+    valueChangeHandler: passwordNameChangeHandler,
+    inputBlurHandler: passwordNameBlurHandler,
+    reset: resetPasswordName,
+  } = useInput(isPassword);
+  const {
+    value: confirmPasswordValue,
+    isValid: confirmPasswordIsValid,
+    hasError: confirmPasswordHasError,
+    valueChangeHandler: confirmPasswordChangeHandler,
+    inputBlurHandler: confirmPasswordBlurHandler,
+    reset: resetConfirmName,
+  } = useInput(isPassword);
 
-    // checking if value of first name and last name is empty show error else take to next step
-    if (validator.isEmpty(values.password) || validator.isEmpty(values.email)) {
-      setError(true);
-    } else {
-      nextStep();
-    }
+  let formIsValid = false;
+
+  if (passwordNameIsValid && confirmPasswordIsValid) {
+    formIsValid = true;
+  }
+
+  const passwordNameClasses = passwordNameHasError
+    ? `${classes.formControl} ${classes.invalid}`
+    : "form-control";
+
+  const confirmNameClasses = confirmPasswordHasError
+    ? `${classes.formControl} ${classes.invalid}`
+    : "form-control";
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    resetPasswordName();
+    resetConfirmName();
+    nextStep();
   };
+
   return (
     <section className={classes.containerForm}>
       <div className={classes.form}>
-        <ZigaDescription />
+        <ZigDescription />
       </div>
-      <form onSubmit={submitFormData}>
+      <form onSubmit={submitHandler}>
         <div className={classes.createPassword}>
           <h2>Create Password</h2>
 
@@ -40,36 +68,38 @@ function CreatePassword({ nextStep, handleFormData, values }) {
 
               <input
                 type="password"
-                className={`${classes.input} ${classes.inputWidth}`}
+                className={`${classes.input} ${classes.inputWidth} ${passwordNameClasses}`}
                 title="please enter your password"
-                style={{ border: error ? "2px solid red" : "" }}
-                onChange={handleFormData("password")}
-                defaultValue={values.password}
+                value={passwordNameValue}
+                onChange={passwordNameChangeHandler}
+                onBlur={passwordNameBlurHandler}
               />
 
-              <div className={classes.error}>
-                {error ? <p>This is a required field</p> : ""}
-              </div>
+              {passwordNameHasError && (
+                <p className={classes.errorText}>
+                  Password must be 8 digit numbers.
+                </p>
+              )}
             </div>
 
             <div
-              className={`${classes.createConfirmPassword} ${classes.spacing}`}
+              className={`${classes.createConfirmPassword} ${classes.spacing} ${confirmNameClasses}`}
             >
               <p className={classes.inputTitle}>Confirm Password</p>
               <input
                 type="password"
                 className={`${classes.input} ${classes.inputWidth}`}
                 title="please enter your password"
-                style={{ border: error ? "2px solid red" : "" }}
-                onChange={handleFormData("password")}
-                defaultValue={values.password}
+                value={confirmPasswordValue}
+                onChange={confirmPasswordChangeHandler}
+                onBlur={confirmPasswordBlurHandler}
               />
 
-              <div className={classes.error}>
-                {error ? <p>This is a required field</p> : ""}
-              </div>
+              {confirmPasswordHasError && (
+                <p className={classes.errorText}>Password must be confirmed.</p>
+              )}
             </div>
-            <button className={classes.createPasswordButton} type="submit">
+            <button className={classes.createPasswordButton} type="submit" disabled={!formIsValid}>
               Next
             </button>
           </div>
