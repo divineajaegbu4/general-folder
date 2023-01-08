@@ -1,0 +1,226 @@
+.dashboard {
+  display: grid;
+  width: 75rem;
+  height: 120vh;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.06);
+  padding: 2rem 10rem;
+  border-radius: 10px;
+  transform: translate(150px, -320px);
+}
+
+.dashboardItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.walletBalance h3 {
+  width: 84px;
+  height: 17px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: #031c41;
+}
+
+.walletBalance h3 span {
+  font-family: "Poppins";
+  color: gray;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57px;
+  height: 45px;
+}
+
+.walletBalance h3 span strong {
+  font-size: 38px;
+  color: #031c41;
+}
+
+.fundAccount {
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.fundAccount button {
+  width: 162px;
+  height: 41px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #04103d;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 0 1.7rem;
+  cursor: pointer;
+}
+
+.fundAccount button .iconPlus {
+  font-size: 20px;
+  position: relative;
+  right: 10%;
+}
+
+.verifyAccount {
+  display: flex;
+  width: 600px;
+  align-items: center;
+  margin-top: 1rem;
+  background: #f3f5fe;
+  border: 1px solid rgba(219, 220, 224, 0.5);
+  border-radius: 10px;
+}
+
+.arrowVerification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #04103d;
+  color: white;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.arrowVerification,
+.textVerification {
+  margin-left: 1rem;
+}
+
+.textVerification {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #000000;
+}
+
+.textVerification p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: -1.3rem;
+}
+
+.textVerification h3 {
+  font-size: 16px;
+}
+
+.textVerification h3 span {
+  position: relative;
+  left: 350px;
+  font-family: "Poppins";
+  font-style: normal;
+  width: 10px;
+  height: 10px;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 34px;
+  border: 1px solid rgba(219, 220, 224, 0.5);
+  border-radius: 50%;
+  padding: 0.2rem;
+  color: #04103d;
+}
+
+.searchTransaction {
+  margin-top: 1rem;
+  display: flex;
+  width: 595px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchTransactionStyle {
+  display: flex;
+  font-family: "Poppins";
+  width: 200px;
+  margin-left: 10.1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgba(219, 220, 224, 0.5);
+}
+
+.searchTransactionStyle input {
+  position: relative;
+  height: 51px;
+  padding: 0 15rem 0 3rem;
+  border: 0.5px solid #e1e5e4;
+  outline: 0;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.searchTransactionStyle input::placeholder {
+  font-size: 1rem;
+  color: rgba(219, 220, 224, 0.5);
+}
+
+.searchTransaction .searchTransactionStyle span {
+  display: flex;
+  font-size: 22px;
+  position: absolute;
+  right: 83.5%;
+  top: 19.2rem;
+  z-index: 100;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #e1e5e4;
+  border-radius: 6px;
+  width: 50px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.emptyTransaction {
+  margin-top: 3rem;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  line-height: 140.62%;
+}
+
+.emptyTransaction h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+}
+
+.emptyTransaction p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #7a807e;
+  margin-top: -1rem;
+}
+
+.iconEmptyTransaction {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background: #f3f5fe;
+}

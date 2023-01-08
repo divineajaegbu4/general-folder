@@ -33,7 +33,7 @@
   letter-spacing: 1px;
   color: gray;
 }
-button {
+.createPasswordButton {
   margin-top: 2rem;
   transform: translateX(0.5rem);
   background-color: #04103d;
@@ -76,4 +76,31 @@ button {
 .backToLogin {
   text-decoration: none;
   color: white;
+}
+
+.createPasswordButton:disabled,
+.createPasswordButton:disabled:hover,
+.createPasswordButton:disabled:active {
+  background: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.createPasswordButton:enabled {
+  cursor: pointer;
+}
+
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.errorText {
+  color: #b40e0e;
 }

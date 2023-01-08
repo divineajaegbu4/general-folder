@@ -3,12 +3,15 @@ import useInput from "../../../hooks/use-input";
 
 import classes from "./GeneralStyleForm.module.css";
 import ZigaDescription from "../../ZigaDescription/ZigaDescription";
+import { useHistory } from "react-router-dom";
 
 
 
 const isPassword = (value) => value.trim().length === 8;
 
-function BankVerification({ nextStep, handleFormData, values }) {
+function BankVerification({ nextStep }) {
+  const history = useHistory();
+
   const {
     value: passwordNameValue,
     isValid: passwordNameIsValid,
@@ -35,6 +38,7 @@ function BankVerification({ nextStep, handleFormData, values }) {
 
     resetPasswordName();
     nextStep();
+    history.push("/dashboard")
   };
   
   return (

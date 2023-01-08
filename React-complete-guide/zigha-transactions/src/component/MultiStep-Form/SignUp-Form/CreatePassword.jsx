@@ -99,7 +99,11 @@ function CreatePassword({ nextStep }) {
                 <p className={classes.errorText}>Password must be confirmed.</p>
               )}
             </div>
-            <button className={classes.createPasswordButton} type="submit" disabled={!formIsValid}>
+            <button
+              className={classes.createPasswordButton}
+              type="submit"
+              disabled={!formIsValid}
+            >
               Next
             </button>
           </div>

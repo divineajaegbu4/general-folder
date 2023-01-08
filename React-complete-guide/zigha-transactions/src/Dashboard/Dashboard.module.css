@@ -1,0 +1,249 @@
+.exchangeContainer {
+  display: grid;
+}
+
+main {
+  display: flex;
+  padding: 2rem 3rem;
+  background: #f3f5fe;
+  height: 130vh;
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboardList ul {
+  position: relative;
+  left: 20px;
+  top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dashboardList ul a {
+  display: flex;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.dashboardList ul a .dashboardIcon {
+  display: flex;
+  position: absolute;
+  transform: translate(-20px, -145px);
+}
+
+.dashboardList ul a .dashboardIconWallet {
+  margin-top: 17px;
+}
+
+.dashboardList ul a .dashboardIconExchange {
+  transform: translate(-20px, -195px);
+}
+
+.grayColor a {
+  color: gray;
+}
+
+/* .validColor {
+  position: relative;
+  display: flex;
+  height: 30px;
+  flex-direction: column;
+  background-color: red;
+
+} */
+/* 
+.validColor div:nth-child(1) {
+  display: flex;
+  position: relative;
+  top: 0.4rem;
+  left: 2rem;
+  margin;
+  background-color: red;
+
+} */
+
+.toggleIcon {
+  position: relative;
+  transform: translateY(-148px);
+  margin-left: 70px;
+}
+
+.subIcon {
+  position: relative;
+  top: 30px;
+}
+
+.express ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.express ul div a {
+  text-decoration: none;
+}
+
+.express {
+  display: flex;
+  position: absolute;
+  top: 20rem;
+  transform: translateX(-0.8rem);
+  width: 130px;
+}
+
+.linkView {
+  position: relative;
+  top: 0.5rem;
+  left: 2rem;
+}
+
+.linkView2 {
+  position: absolute;
+  top: 2.9rem;
+  left: 3rem;
+}
+
+.p2pText div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: -20rem;
+  width: 75rem;
+  height: 50rem;
+  border-radius: 10px;
+  left: 15%;
+  font-size: 3rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.06);
+}
+
+.grayBackground {
+  height: 35px;
+  width: 8rem;
+  background: rgba(0, 10, 74, 0.12);
+  border-radius: 10px;
+}
+
+.exchangeForm {
+  display: flex;
+  background-color: #fff;
+  height: 50rem;
+  width: 75rem;
+  padding: 2rem 5rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.06);
+  position: relative;
+  left: 150px;
+  margin-top: -20rem;
+}
+
+.walletBalance {
+  position: absolute;
+  height: 54px;
+  width: 130px;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  color: #031c41;
+}
+
+.walletBalance h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2.5;
+  color: #031c41;
+}
+
+.walletBalance h3 {
+  font-size: 45px;
+  margin-top: -3px;
+  transform: translateX(-1.2rem);
+  color: gray;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.naira {
+  position: relative;
+  width: 16px;
+  height: 17px;
+  top: -14px;
+  left: 0.2px;
+  color: #031c41;
+}
+.num {
+  font-size: 45px;
+  color: #031c41;
+}
+
+.fund {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 150px;
+  height: 41px;
+  background: #04103d;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.fund .text,
+.fund .iconPlus {
+  margin-left: 5px;
+}
+
+.border {
+  position: absolute;
+  width: 770px;
+  height: 0px;
+  left: -140px;
+  top: 380px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transform: rotate(90deg);
+}
+
+.flag {
+  position: relative;
+  width: 127px;
+  font-size: 1.2rem;
+  background: #f3f5fe;
+  border-radius: 0px 4px 4px 0px;
+  border: 0;
+  outline: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  top: -46rem;
+  transform: translateX(450px);
+}

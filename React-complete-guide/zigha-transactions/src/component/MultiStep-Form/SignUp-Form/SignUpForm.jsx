@@ -1,17 +1,19 @@
-import React from "react";
+import React,{useContext} from "react";
 
 import ZigDescription from "../../ZigaDescription/ZigaDescription";
 import classes from "./GeneralStyleForm.module.css";
 import { Link } from "react-router-dom";
 
 import useInput from "../../../hooks/use-input";
-import { auth } from "../../../hooks/firebase";
+import AuthContext from "../../../store/auth-context";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.trim().includes("@");
 const isNumber = (value) => value.trim().length === 11;
 
 const SignUpForm = ({ nextStep }) => {
+
+  const authCtx = useContext(AuthContext);
 
   const {
     value: firstNameValue,
@@ -79,18 +81,59 @@ const SignUpForm = ({ nextStep }) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    auth
-      .createUserWithEmailAndPassword(emailNameValue, numberNameValue)
-      .then((auth) => {
-        if (auth) {
-          resetFirstName();
-          resetLastName();
-          resetEmailName();
-          resetNumberName();
-          nextStep();
+    fetch(
+      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyApfpmgvVx0vJ96b19jVRQCABmG0XB1bcU",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          email: emailNameValue,
+          password: numberNameValue,
+          returnSecureToken: true,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      // auth
+      // .createUserWithEmailAndPassword(emailNameValue, numberNameValue)
+      // .then((auth) => {
+      //   if (auth) {
+      //     resetFirstName();
+      //     resetLastName();
+      //     resetEmailName();
+      //     resetNumberName();
+      //     nextStep();
+      //   }
+      // })
+      // .catch((error) => alert("Authentication failed!"));
+
+      .then((res) => {
+        // setIsLoading(false);
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then((data) => {
+            let errorMessage = "Authentication failed!";
+
+            throw new Error(errorMessage);
+          });
         }
-      }) .catch((error) => alert("Authentication failed!"));
-    
+      })
+      .then((data) => {
+        const expirationTime = new Date(
+          new Date().getTime() + +data.expiresIn * 1000
+        );
+        authCtx.login(data.idToken, expirationTime.toISOString());
+        resetFirstName();
+        resetLastName();
+        resetEmailName();
+        resetNumberName();
+        nextStep();
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
   };
   return (
     <section className={classes.containerForm}>
@@ -181,7 +224,7 @@ const SignUpForm = ({ nextStep }) => {
               )}
             </div>
           </div>
-          <button type="submit" disabled={!formIsValid}>
+          <button type="submit" className={classes.createPasswordButton} disabled={!formIsValid}>
             Continue
           </button>
           <p className={classes.haveAccount}>

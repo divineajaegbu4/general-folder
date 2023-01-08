@@ -3,7 +3,7 @@ import ZigaDescription from "../../ZigaDescription/ZigaDescription";
 import useInput from "../../../hooks/use-input";
 import classes from "./GeneralStyleForm.module.css";
 
-const isPassword = (value) => value.trim().length === 8;
+const isPassword = (value) => value.trim().length === 4;
 
 function CreatePin({ nextStep }) {
   const {
@@ -78,7 +78,7 @@ function CreatePin({ nextStep }) {
 
               {passwordNameHasError && (
                 <p className={classes.errorText}>
-                  Password must be 8 digit numbers.
+                  Password must be 4 digit numbers.
                 </p>
               )}
             </div>

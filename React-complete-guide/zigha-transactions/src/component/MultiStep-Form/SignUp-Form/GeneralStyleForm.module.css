@@ -1,6 +1,6 @@
 .containerForm {
   display: flex;
-  justify-content: space-between;
+  column-gap: 150px;
 }
 .createAccount {
   position: relative;
@@ -16,7 +16,6 @@ select {
   text-align: center;
 }
 .inputTitle {
-  /* font-family: "Nexa"; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -59,9 +58,9 @@ select {
   letter-spacing: 1px;
   color: gray;
 }
-button {
+.createPasswordButton {
   margin-top: 2rem;
-  transform: translateX(0.5rem);
+  margin-left: 0.7rem;
   background-color: #04103d;
   width: 27.5rem;
   padding: 0.8rem;
@@ -74,16 +73,15 @@ button {
   cursor: pointer;
 }
 
-button:disabled,
-button:disabled:hover,
-button:disabled:active {
+.createPasswordButton:disabled,
+.createPasswordButton:disabled:hover,
+.createPasswordButton:disabled:active {
   background: #ccc;
   color: #292929;
   border-color: #ccc;
   cursor: not-allowed;
 }
-
-button:enabled {
+.createPasswordButton:enabled {
   cursor: pointer;
 }
 
@@ -100,7 +98,6 @@ button:enabled {
 .errorText {
   color: #b40e0e;
 }
-
 
 .haveAccount {
   text-align: center;
@@ -154,7 +151,6 @@ select {
   position: relative;
   bottom: -10px;
 }
-
 
 .offscreen {
   position: absolute;
