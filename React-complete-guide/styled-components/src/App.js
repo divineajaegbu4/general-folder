@@ -23,11 +23,19 @@ function App() {
       <PassedProps />
       <ComingFromCss />
       <PseudoElementsSelectorsNesting />
-      <DoubleAmpersand/>
-      <AttachingAdditionalProps/>
-      <Animations/>
-      <KeepItSimple items={Items}/>
-      <UseDefaultProps/>
+      <DoubleAmpersand />
+      <AttachingAdditionalProps />
+      <Animations />
+
+      {/* Create React Component Like Senior */}
+      <KeepItSimple items={Items} />
+      <UseDefaultProps />
+
+      {/* <ul>
+        <p>Divine</p>
+        <p>Happiness</p>
+        <p>Mangoes</p>
+      </ul> */}
     </div>
   );
 }
