@@ -9,6 +9,9 @@ import StyleH1 from "./Components/Basics/GettingStarted";
 import PassedProps from "./Components/Basics/PassedProps";
 import PseudoElementsSelectorsNesting from "./Components/Basics/PseudoelEmentsSelectorsNesting";
 import StylingAnyComponent from "./Components/Basics/StylingAnyComponent";
+import KeepItSimple from "./Components/ReactComponentLikeASenior/KeepItSimple";
+import Items from "./Components/ReactComponentLikeASenior/Items";
+import UseDefaultProps from "./Components/ReactComponentLikeASenior/UseDefaultProps";
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
       <DoubleAmpersand/>
       <AttachingAdditionalProps/>
       <Animations/>
+      <KeepItSimple items={Items}/>
+      <UseDefaultProps/>
     </div>
   );
 }
