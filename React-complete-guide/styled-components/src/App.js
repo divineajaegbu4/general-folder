@@ -12,6 +12,8 @@ import StylingAnyComponent from "./Components/Basics/StylingAnyComponent";
 import KeepItSimple from "./Components/ReactComponentLikeASenior/KeepItSimple";
 import Items from "./Components/ReactComponentLikeASenior/Items";
 import UseDefaultProps from "./Components/ReactComponentLikeASenior/UseDefaultProps";
+import Test from "./Components/Testing/Test";
+import Login from "./Components/Testing/Login";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       {/* Create React Component Like Senior */}
       <KeepItSimple items={Items} />
       <UseDefaultProps />
+      <Test/>
+      <Login/>
 
       {/* <ul>
         <p>Divine</p>

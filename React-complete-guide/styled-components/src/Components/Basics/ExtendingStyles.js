@@ -10,7 +10,7 @@ function ExtendingStyles() {
     border: 2px solid palevioletred;
   `;
 
-  const TomatoButton = styled(Button)`
+  const TomatoButtons = styled(Button)`
     color: tomato;
     border-color: tomato;
   `;
@@ -53,7 +53,7 @@ function ExtendingStyles() {
       <Section>
         <div>
           <Button>Normal Button</Button>
-          <TomatoButton>Tomato Button</TomatoButton>
+          <TomatoButtons>Tomato Button</TomatoButtons>
           <Paragraph>Divine</Paragraph>
           <Paragraph>Bekee</Paragraph>
           <SelectionP background>Hello</SelectionP>
@@ -61,12 +61,12 @@ function ExtendingStyles() {
         </div>
 
         <Links>
-          <TomatoButton as="a" href="#">
+          <TomatoButtons as="a" href="#">
             Link with Tomato Button
-          </TomatoButton>
-          <TomatoButton>
+          </TomatoButtons>
+          <TomatoButtons>
             <a href="#">Link with Delicious Tomato Button</a>
-          </TomatoButton>
+          </TomatoButtons>
           <Button as="a" href="#">
             Link with Button Styles
           </Button>
